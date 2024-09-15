@@ -1,0 +1,39 @@
+@import url("reset.css");
+
+span {
+    color: red;
+}
+[class*='__link'] {
+    color: orange;
+}
+#conection {
+    color: green;
+}
+.subtitle {
+    color: blue;
+}
+.colored-link {
+    color: rgb(23, 161, 161);
+}
+.header__text a {
+    color: darkblue;
+}
+div.about__text {
+    color: rgb(139, 23, 68);
+}
+.colored-link.menu__link,
+.excurtion__item .excurtion__title {
+    color: rgb(180, 48, 152);
+}
+.excurtion__item * {
+    color: green;
+}
+.excurtion__list ~ div {
+    color: red;
+}
+.excurtion__text > p {
+    color: gray;
+}
+.excurtion__list + div {
+    color: blue;
+}
