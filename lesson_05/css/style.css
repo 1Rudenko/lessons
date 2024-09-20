@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope:regular,600,700&display=swap');
+@import url('reset.css');
+
+body {
+    font-family: 'Montserrat', serif;
+    font-size: 18px;
+    
+}
+[class*='page__'] {
+    padding: 30px;
+}
+/*=================================*/
+/*introduce==============================*/
+.page__introduce {
+    font-family: 'Roboto', sans-serif;
+    max-width: 540px;
+}
+.introduce__title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.32; /* 66/50 */
+    color: #091133;
+    margin-bottom: 20px;
+}
+
+.introduce__text {
+    color: #505F98;
+    line-height: 1.67; /* 30/18 */
+    margin-bottom: 70px;
+}
+.introduce__text p {
+    margin-bottom: 12px;
+}
+.introduce__buttons {}
+
+.introduce__button {
+    font-size: 16px;
+    line-height: 1.62; /* 26/16 */
+    font-weight: 500;
+    color: #111B47;
+    padding: 3px 10px;
+    border: 2px solid #111B47;
+    width: 190px;
+    text-align: center;
+
+}
+
+.introduce__button-colored {
+    margin-right: 30px;
+    background-color: #111B47;
+    color: #FFFFFF;
+}
+
+/*=devices===============================*/
+.devices {
+    font-family: 'Manrope', sans-serif;
+    background-color: #1E1E1E;
+    color: #999999;
+    line-height: 1.5;
+}
+.devices__title {
+    font-weight: 700;
+    font-size: 38px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+
+.devices__text {
+    margin-bottom: 80px;
+}
+
+.devices__items {
+    margin: -15px;
+}
+
+.devices__item {
+    background-color: #0F0F0F;
+    padding: 50px;
+    width: 33.337%;
+    margin: 15px;
+    display: inline-block;
+}
+
+.item-devices {}
+
+.item-devices__top {
+    margin-bottom: 30px;
+}
+.item-devices__img {
+    padding: 16px;
+    background-color: #1F1F1F;
+    display: inline-block;
+    border-radius: 12px;
+    margin-right: 16px;
+}
+.item-devices__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.item-devices__body {}
+
+/*=design ============================*/
+.page__design {
+    font-family: 'Roboto', sans-serif;
+    max-width: 520px;
+}
+.design__container {}
+
+.design__title {
+    font-size: 36px;
+    line-height: 1.33; /* 48/36 */
+    font-weight: 500;
+    color: #091133;
+    margin-bottom: 16px;
+}
+
+.design__text {
+    color: #6F7CB2;
+    line-height: 1.63; /* 26/16 */
+    margin-bottom: 70px;
+}
+
+.design__items {}
+
+.item-design img {
+    margin-bottom: 14px;
+}
+.item-design__title {
+    color: #091133;
+    margin-bottom: 6px;
+    font-weight: 500;
+    line-height: 1.63; /* 26/16 */
+    font-size: 16px;
+}
+.item-design__text {
+    font-size: 12px;
+    color: #5D6970;
+    line-height: 1.5;
+}
