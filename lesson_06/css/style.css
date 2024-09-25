@@ -37,7 +37,7 @@ body {
 }
 .hero__title {
     font-size: 68px;
-    background: url(../img/introduce/flower.jpg) fixed;
+    background: url(../img/introduce/flower.jpg) 0 0 fixed;
 }
 .hero__text {
     text-align: center;
@@ -51,6 +51,8 @@ body {
 }
 .introduce__title {
     font-size: 52px;
+    background: url(../img/introduce/flower.jpg) 0 0 / contain;
+    
 }
 .introduce__text {
     padding-inline: 30px;
