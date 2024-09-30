@@ -365,11 +365,11 @@ body {
 .game__title:not(:last-child) {
     margin-bottom: 20px;
 }
-.game_item {
+.game__item {
     background-color: #5245c2;
     visibility: hidden;
 }
-.game_item span {
+.game__item span {
     display: inline-block;
     color: #fff;
     text-transform: capitalize;
@@ -378,41 +378,38 @@ body {
     width: 100%;
     
 }
-.game_item-01 {
+.game__item-01 {
     visibility: visible;
     width: 200px;
     height: 25px;
 }
-/* .game_item-01:hover .game_item-02{
-    visibility: visible;
-} */
-.game__item:hover ~:nth-child(1) {
+.game__item:hover + .game__item,
+.game__item:hover {
     visibility: visible;
 }
-.game_item-02 {
+
+.game__item-02 {
     width: 20px;
     height: 150px;
     margin-left: 180px;
 }
-
-.game_item-03 {
+.game__item-03 {
     width: 300px;
     height: 15px;
     margin-left: 180px;
 }
 
-.game_item-04 {
+.game__item-04 {
     width: 10px;
     height: 150px;
     margin-left: 470px;
 }
-
-.game_item-05 {
+.game__item-05 {
     width: 200px;
     height: 8px;
     margin-left: 280px;
 }
-.game_item-06 {
+.game__item-06 {
     width: 5px;
     height: 100px;
     margin-left: 280px;
@@ -428,7 +425,7 @@ body {
     text-align: center;
     color: #1E1B39;
 }
-.test:hover .test__inner {
+.test:hover > .test__inner {
     visibility: visible;
 }
 /*=footer============================*/
