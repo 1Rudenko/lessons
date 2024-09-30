@@ -418,8 +418,19 @@ body {
     margin-left: 280px;
 }
 /*================================*/
-
-
+.test {
+    border: 3px solid #4A3AFF;
+    max-width: 200px;
+    margin: 0 auto;
+}
+.test__inner {
+    visibility: hidden;
+    text-align: center;
+    color: #1E1B39;
+}
+.test:hover .test__inner {
+    visibility: visible;
+}
 /*=footer============================*/
 .footer {
     text-align: center;  
