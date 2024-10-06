@@ -92,7 +92,7 @@ body {
     bottom: 0;
 }
 
-.header__logo {
+.logo {
     width: 150px;
 }
 .menu__list {
@@ -153,9 +153,11 @@ Linear Gradient
     text-align: center;
     flex: 0 1 40%;
 }
+
 .about__image img{
     width: 100%;
 }
+
 .about__content {
     flex: 0 1 60%;
 }
@@ -208,13 +210,15 @@ Linear Gradient
 }
 .advantages__items {
     display: flex;
-    gap: 30px;
+    column-gap: 15px;
 
 }
 .advantages__item {
-    max-width: 450px;
+    flex: 0 1 30%;
+    justify-content: space-between;
+    /* max-width: 450px; */
     box-shadow: 0 0 6px 2px rgba(111, 94, 180, 0.4);
-    padding: 15px;
+    padding: 15px 20px;
     transition: box-shadow 0.5s ;
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -246,12 +250,21 @@ Linear Gradient
     
 }
 .footer__body {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    align-items: center;
     background-color: rgba(87, 77, 129, 0.7);
-    padding-block: 30px;
+    padding: 30px 10px;
+}
+.footer__logo:not(:last-child) {
+    margin-bottom: 30px;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    padding-inline: 15px;
+    
+}
+.footer-menu{
+    padding-top: 25px;
 }
 .footer-menu__list {
     flex-direction: column;
@@ -283,6 +296,7 @@ Linear Gradient
     flex-direction: column;
     row-gap: 15px;
 }
+
 .footer__title {
     text-align: center;
 }
@@ -301,19 +315,23 @@ Linear Gradient
 }
 .footer__btn {
     background-color:rgb(68, 49, 146);
-    /* background-color: #574d81; */
     border: 1px solid #574d81;
     border-radius: 3px;
     padding: 5px 10px;
     outline: transparent;
     transition: background-color 0.3s color 0.3s;
+    text-align: center;
+    align-items: center;
 }
 .footer__btn:hover {
     background-color: rgba(68, 49, 146, 0.8);
     color: #ffff;
 }
+.contacts {
+    padding-top: 25px;
+}
 .contacts__list:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .contacts__item:not(:last-child) {
     margin-bottom: 15px;
@@ -332,7 +350,13 @@ Linear Gradient
 .contacts__item:hover {
     color: #ffff;
     fill: #ffff;
-}   
+}
+.social__link path {
+    transition: fill 0.3s;
+}
+.social__link path:hover {
+    fill: #ffff;
+}
 /*------------------------*/
 @media (min-width: 868px) {
     .content-block {
@@ -366,7 +390,7 @@ Linear Gradient
     }
 }
 @media (max-width: 768px) {
-    /* .menu__body {
+    .menu__body {
         position: absolute;
         top: 100px;
         left: 0;
@@ -380,7 +404,17 @@ Linear Gradient
     }
     .icon-menu {
         display: block;
-    } */
+    }
+    .title {
+        font-size: 20px;
+        
+    }
+    .title:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .hero {
+        padding-top: 50px;
+    }
     .about__body {
         padding: 20px 15px;
     }
@@ -395,18 +429,20 @@ Linear Gradient
     }
     .advantages__items {
         flex-direction: column;
+        row-gap: 25px;
         
     }
     .advantages__item {
         max-width: 100%;
     }
-    .footer__body {
+    .footer__inner {
         padding-block: 20px;
         flex-wrap: wrap;
-        row-gap: 30px;
+        gap: 35px 20px;
+        justify-content: space-evenly;
     }
 
 }
 @media (max-width: 430px) {
-    
+
 }
