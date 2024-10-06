@@ -443,6 +443,16 @@ Linear Gradient
     }
 
 }
-@media (max-width: 430px) {
-
+@media (max-width: 480px) {
+    .footer__logo:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .footer__inner {
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 10px;
+    }
+    .footer-menu__item:not(:last-child) {
+        margin-bottom: 25px;
+    }
 }
