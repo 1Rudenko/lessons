@@ -211,6 +211,7 @@ Linear Gradient
 .advantages__items {
     display: flex;
     column-gap: 15px;
+    justify-content: center;
 
 }
 .advantages__item {
@@ -258,13 +259,16 @@ Linear Gradient
 }
 .footer__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     column-gap: 30px;
     padding-inline: 15px;
-    
+}
+.footer__text {
+    max-width: 350px;
+    line-height: 1.5;
 }
 .footer-menu{
-    padding-top: 25px;
+    
 }
 .footer-menu__list {
     flex-direction: column;
@@ -328,7 +332,7 @@ Linear Gradient
     color: #ffff;
 }
 .contacts {
-    padding-top: 25px;
+    
 }
 .contacts__list:not(:last-child) {
     margin-bottom: 15px;
@@ -435,13 +439,7 @@ Linear Gradient
     .advantages__item {
         max-width: 100%;
     }
-    .footer__inner {
-        padding-block: 20px;
-        flex-wrap: wrap;
-        gap: 35px 20px;
-        justify-content: space-evenly;
-    }
-
+   
 }
 @media (max-width: 480px) {
     .footer__logo:not(:last-child) {
@@ -455,4 +453,14 @@ Linear Gradient
     .footer-menu__item:not(:last-child) {
         margin-bottom: 25px;
     }
+    .footer__inner {
+        padding-block: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer__text {
+        max-width: 100%;
+    }
+
 }
