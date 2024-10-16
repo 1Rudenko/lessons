@@ -183,8 +183,8 @@ body {
 }
 .modern-studio__image--laptop {
     position: absolute;
-    width: 276px;
-    height: 295px;
+    width: 246px;
+    height: 305px;
     top: 0;
     left: 0;
     background-color: #B550F8;
@@ -259,13 +259,11 @@ body {
 }
 
 .test__item:not(:last-child) {
-   
 }
 .test__item:nth-child(1) {
     background-color: aquamarine;
     position: relative;
     /* top: 60px; */
-   
 }
 .test__item:nth-child(2) {
     background-color: rgb(167, 89, 154);
