@@ -328,6 +328,7 @@ body {
     width: 20px;
     height: 60px;
     background-color: grey;
+    background-color: rgb(160, 27, 27);
     z-index: -3;
 }
 .spot__foot--left {
