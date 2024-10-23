@@ -68,29 +68,29 @@ body {
     animation-iteration-count: infinite;
 }
 
-.mosaic__dude {
+.spot__dude {
     min-width: 270px;
     min-height: 450px;
     position: absolute;
-    bottom: 8%;
+    bottom: -1%;
     left: 33%;
     transition: all 0.3s;
 }
-.mosaic__dude:hover .dude__hand,
-.mosaic__dude:hover .dude__leg {
+/* .spot__dude:hover .dude__hand,
+.spot__dude:hover .dude__leg {
     transform-origin: top;
     transform: rotateX(-65deg);
     
-}
-.mosaic__dude:hover .dude__head:before,
-.mosaic__dude:hover .dude__head::after {
+} */
+/* .spot__dude:hover .dude__head:before,
+.spot__dude:hover .dude__head::after {
     transform: scale(0.9);
     transform: skew(15deg);
-}
-.mosaic__dude:hover {
+} */
+/* .spot__dude:hover {
     top: 40%;
     transition: all 0.3s;
-}
+} */
 .dude__body {
     position: absolute;
     background-color: rgb(91, 190, 91);
@@ -197,7 +197,9 @@ body {
     left: 0;
     top: 50%;
     background-color: #c0c0c0;
-    background: linear-gradient(180deg, rgba(192,192,192,1) 0%, rgba(192,192,192,1) 50%, rgba(121,116,116,1) 100%);
+    /* background: linear-gradient(180deg, rgba(192,192,192,1) 0%, rgb(122, 121, 121) 60%, rgba(192,192,192,1) 63%, rgb(122, 121, 121) 64%, rgba(192,192,192,1) 65%, rgba(121,116,116,1) 100%);
+    border-radius: 50% 50% 50% 50% / 53% 53% 47% 47% ;
+    background: linear-gradient(180deg, rgba(122, 121, 121) 0%, rgba(192,192,192,1) 60%, rgba(122, 121, 121) 63%, rgb(122, 121, 121) 64%, rgba(122, 121, 121) 65%, rgba(121,116,116,1) 100%); */
     border-radius: 50% 50% 50% 50% / 53% 53% 47% 47% ;
     z-index: 2;
     border: 3px solid rgb(51, 49, 49);
@@ -206,7 +208,7 @@ body {
 
 .spot__circle {
     position: absolute;
-    top: 21%;
+    top: 37%;
     left: calc(50% - 150px);
     /* min-width: 300px;
     min-height: 50px; */
