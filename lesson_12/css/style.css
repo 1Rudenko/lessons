@@ -87,7 +87,7 @@ body {
     top: 20%;
     left: 50%;
     z-index: 1;
-    animation: hide 1s 3s forwards;
+    animation: hide 1s 5s forwards;
 }
 
 .dude__head {
@@ -111,7 +111,6 @@ body {
     border: 1px solid green;
     border-radius: 82% 1% 88% 24% / 79% 36% 100% 31%;
     border-radius: 82% 24% 82% 24% / 79% 36% 79% 36%;
-    /* animation: eye 2s infinite; */
 }
 .dude__head:before {
     left: 2px;
@@ -122,7 +121,7 @@ body {
     left: 37px;
     top: 47px;
     transform: rotate(-124deg);
-    animation: eye 1s 90ms ;
+    animation: eye 1s 3s ;
 }
 .dude__hand,
 .dude__leg {
@@ -174,7 +173,7 @@ body {
     box-shadow: inset -14px 4px 9px #fff;
     transform-origin: left bottom;
     transform: rotate(-90deg) translateY(50%);
-    animation: preparation-top 2s linear 2s forwards, glass-shane 3s infinite ;
+    animation: preparation-top 2s linear 4s forwards, glass-shane 3s infinite ;
 }
 .spot__bottom {
     position: absolute;
@@ -230,7 +229,7 @@ body {
     background-color: grey;
     background-color: rgb(160, 27, 27);
     z-index: -3;
-    animation: preparation-foot 3s linear 3s forwards ;
+    animation: preparation-foot 2s linear 4s forwards ;
 }
 .spot__foot--left {
     left: 30%;
@@ -308,12 +307,11 @@ body {
 @keyframes bye {
     0% {}
     100% {
-        transform: translate(61%, -50%) scale(4.0);
+        transform: translate(60%, -50%) scale(4.0);
     }
 }
 @keyframes eye {
     100% {
-    
         background: rgb(91, 190, 91);
     }
 }
