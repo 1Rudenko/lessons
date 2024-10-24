@@ -121,7 +121,7 @@ body {
     left: 37px;
     top: 47px;
     transform: rotate(-124deg);
-    animation: eye 1s 3s ;
+    animation: eye 1s 2s ;
 }
 .dude__hand,
 .dude__leg {
@@ -157,7 +157,7 @@ body {
     width: 800px;
     height: 600px;
     z-index: 1;
-    animation: start 6s ease-in 6s forwards;
+    animation: start 5s ease-in 6s forwards;
 }
 
 .spot__top {
@@ -173,7 +173,7 @@ body {
     box-shadow: inset -14px 4px 9px #fff;
     transform-origin: left bottom;
     transform: rotate(-90deg) translateY(50%);
-    animation: preparation-top 2s linear 4s forwards, glass-shane 3s infinite ;
+    animation: preparation-top 2s linear 3s forwards, glass-shane 3s infinite ;
 }
 .spot__bottom {
     position: absolute;
@@ -246,6 +246,7 @@ body {
     letter-spacing: 3px;
     text-shadow: 0px 0px 30px #fff;
     animation: bye 6s 8s forwards;
+    will-change: auto;
 }
 @keyframes moon-shane {
     0% {
@@ -307,7 +308,9 @@ body {
 @keyframes bye {
     0% {}
     100% {
+        will-change: auto;
         transform: translate(60%, -50%) scale(4.0);
+        
     }
 }
 @keyframes eye {
