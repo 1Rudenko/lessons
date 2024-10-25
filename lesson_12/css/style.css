@@ -360,7 +360,7 @@ body {
     }
 
     100% {
-        transform: translate(30%, -50%) scale(0%) ;
+        transform: translate(30%, -50%) scale(0) ;
     }
 }
 
