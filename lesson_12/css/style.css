@@ -9,20 +9,24 @@ body {
     font-weight: 700;
     font-size: 20px;
 }
+
 [class*='__container'] {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .wrapper {
     min-height: 100%;
     overflow: clip;
     display: flex;
     flex-direction: column;
 }
+
 .page {
     flex: 1 0 auto;
 }
+
 /*=header===========================*/
 .header {
     text-align: center;
@@ -37,6 +41,7 @@ body {
     color: #ffff;
     
 }
+
 .header__title {
     text-transform: uppercase;
     font-size: 28px;
@@ -53,6 +58,7 @@ body {
     min-height: 1000px;
     position: relative;
 }
+
 .mosaic__space::before {
     content: '';
     position: absolute;
@@ -100,6 +106,7 @@ body {
     left: -20px;
     transform: rotate(-45deg);
 }
+
 .dude__head:before,
 .dude__head:after {
     content: '';
@@ -112,37 +119,45 @@ body {
     border-radius: 82% 1% 88% 24% / 79% 36% 100% 31%;
     border-radius: 82% 24% 82% 24% / 79% 36% 79% 36%;
 }
+
 .dude__head:before {
     left: 2px;
     top: 13px;
     transform: rotate(124deg);
 }
+
 .dude__head:after {
     left: 37px;
     top: 47px;
     transform: rotate(-124deg);
     animation: eye 1s 2s ;
 }
+
 .dude__hand,
 .dude__leg {
     position: absolute;
 }
+
 .dude__hand--left {
     right: 16px;
     top: 0px;
 }
+
 .dude__hand--right {
     left: 16px;
     top: 0px;
 }
+
 .dude__leg--left {
     bottom: -150px;
     left: -39px;
 }
+
 .dude__leg--right {
     bottom: -128px;
     right: -35px;
 }
+
 /*=spot=============================*/
 .mosaic__spot {
     min-width: 800px;
@@ -152,6 +167,7 @@ body {
     left: 12%;
 
 }
+
 .spot__body {
     position: relative;
     width: 800px;
@@ -167,7 +183,7 @@ body {
     border-radius: 50% 50% 52% 52% / 76% 76% 24% 24%  ;
     top: 24%;
     left: calc(50% - 150px);
-    background-color: rgba(138, 143, 185, 1);
+    background-color: rgba(138, 143, 185, 0.7);
     border: 4px solid rgba(138, 143, 185, 0.5);
     z-index: 3;
     box-shadow: inset -14px 4px 9px #fff;
@@ -175,6 +191,7 @@ body {
     transform: rotate(-90deg) translateY(50%);
     animation: preparation-top 2s linear 3s forwards, glass-shane 3s infinite ;
 }
+
 .spot__bottom {
     position: absolute;
     width: 100%;
@@ -189,7 +206,30 @@ body {
     border: 3px solid rgb(51, 49, 49);
     animation: glass-shane 3s infinite ;
 }
-
+.spot__double2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: -10%;
+    border-radius: 50% 50% 50% 50% / 53% 53% 47% 47% ;
+    z-index: 2;
+    border: 3px solid rgb(100, 93, 93);
+    box-shadow: 0px 0px 15px rgb(22, 21, 21);
+    transform: scale(0.8);
+}
+.spot__double {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0%;
+    top: 45%;
+    border-radius: 50% 50% 50% 50% / 53% 53% 47% 47% ;
+    z-index: 2;
+    border: 3px solid rgb(100, 93, 93);
+    box-shadow: 0px 0px 15px rgb(22, 21, 21);
+    transform: scale(0.9, 0.8);
+}
 .spot__circle {
     position: absolute;
     top: 37%;
@@ -197,6 +237,7 @@ body {
     min-width: 37.5%;
     min-height: 16.67%;
 }
+
 .circle-spot__item {
     position: absolute;
     background-color: gray;
@@ -205,22 +246,24 @@ body {
     border-radius: 50%;
     animation: circle 3s 5s forwards ;
 }
+
 .circle-spot__item--middle {
     top: 0;
     left: calc(50% - 25px);
 }
+
 .circle-spot__item--left {
     top: -28%;
     left: 0;
 }
+
 .circle-spot__item--right {
     top: -28%;
     right: 0;
 }
 
-.spot__foots {
-    
-}
+.spot__foots {}
+
 .spot__foot {
     position: absolute;
     bottom: -30px;
@@ -231,88 +274,123 @@ body {
     z-index: -3;
     animation: preparation-foot 2s linear 4s forwards ;
 }
+
 .spot__foot--left {
     left: 30%;
     transform: skewX(-30deg);
 }
+
 .spot__foot--right {
     right: 30%;
     transform: skewX(30deg);
 }
+
 .mosaic__message {
     position: absolute;
     left: 17%;
     bottom: 20%;
+    transform-origin: center;
     letter-spacing: 3px;
     text-shadow: 0px 0px 30px #fff;
     animation: bye 6s 8s forwards;
-    will-change: auto;
+    /* will-change: auto; */
+    transform: translate(60%, -50%) scale(0);
+    will-change: transform;
 }
+
 @keyframes moon-shane {
     0% {
         box-shadow: -10px 10px 60px #fff;
     }
+
     50% {
         box-shadow: -30px 30px 100px #fff;
     }
+
     100% {
         box-shadow: -10px 10px 60px #fff;
     }
 }
+
 @keyframes glass-shane {
     0% {
         box-shadow: inset -16px 3px 9px #fff;
     }
+
     50% {
         box-shadow: inset -25px 2px 9px #fff;
     }
 
 }
+
 @keyframes preparation-top {
     50% {
         top: 25%;
         transform: rotate(-45deg) translateY(20%);
     }
+
     100% {
         top: 26%;
         transform: rotate(0deg) translateY(0%);
+        background-color: rgba(138, 143, 185, 1);
     }
 }   
+
 @keyframes preparation-foot {
     50% {
         bottom: -15px;
     }
+
     100% {
         bottom: 20px;
     }
 } 
+
 @keyframes hide {
     100% {
         display: none;
     }
 }
+
 @keyframes start {
     50% {
         transform: translate(-10%, -18%) ;
     }
+
     100% {
         transform: translate(30%, -50%) scale(0%) ;
     }
 }
+
 @keyframes circle{
     100% {
         box-shadow: 0px 0px 8px 6px rgba(255, 255, 0, 1);
         background-color: yellow;
     }
 }
-@keyframes bye {
+
+/* @keyframes bye {
     0% {}
+
     100% {
         will-change: auto;
         transform: translate(60%, -50%) scale(4.0);
         
     }
+} */
+
+
+@keyframes bye {
+    0% {
+        /* Встановіть початкові значення */
+        transform: translate(60%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(60%, -50%) scale(4.0);
+    }
 }
+
 @keyframes eye {
     100% {
         background: rgb(91, 190, 91);
