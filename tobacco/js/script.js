@@ -9,9 +9,14 @@ new Swiper ('.hero__swiper',{
         effect: 'slide',
     },
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         // stopOnLastSlide: true,
-        // autoplayDisableOnInteraction:true,
+        autoplayDisableOnInteraction:true,
     },
     speed: 1000,
+});
+$(document).ready(function() {
+    $('.header__icon').click(function(event) {
+        $('.header__icon,.header__menu').toggleClass('active');
+    });
 });
