@@ -148,6 +148,7 @@ header__body:before {
 /*-hero-----------------------------*/
 .page__hero {
     padding-top: 80px;
+    height: 100vh;
 }
 .hero-slide__img {
     text-align: center;
