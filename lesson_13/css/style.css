@@ -63,18 +63,23 @@ body {
     border-radius: 19px;
     padding: 5px 15px 1px;
     align-self: start;
-    transition: background-color 0.3s;
+    transition: box-shadow 0.3s;
+    text-align: center;
 }
 
 .sticker__btn:hover {
-    background-color: rgb(255, 255, 255, 0.7);
+    box-shadow: inset 0px  0px 5px #391400;
 }
 .sticker__title {
     font-weight: 800;
     font-size: 40px;
     line-height: 1.2; /* 48/40 */
+    transition: color 0.7s;
 }
 
+.sticker__title:hover {
+    color:  rgb(57, 20, 0, 0.6);
+}
 .button {
     background-color: transparent;
     font-weight: 900;
@@ -132,6 +137,7 @@ body {
 
 .portfolio__list {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 60px;
     justify-content: center;
     animation: light 1s forwards;
@@ -169,32 +175,36 @@ body {
 }
 
 .portfolio__point {
-    max-width: 470px;
-    overflow: hidden;
-    border-radius: 6px;
+    
 }
 
 .portfolio__point:nth-child(4n + 2),
 .portfolio__point:nth-child(4n + 3) {
-    max-width: 670px;
+    flex-basis: 670px;
 }
 
-.portfolio__point:nth-child(4n + 2) .sticker,
-.portfolio__point:nth-child(4n + 3) .sticker {
-    left: 7.164179%; /* 48/670 */
-}
-.portfolio__point {
+.point-portfolio {
+    flex-basis: 470px;
+    min-height: 416px;
+    padding: 51px 48px;
+    display: flex;
+    align-items: flex-end;
     position: relative;
+    transition: border-color 0.9s ;
+    border-radius: 6px;
 }
 
-.point-portfolio__image img {
-    /* border-radius: 6px; */
+.point-portfolio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
 }
 
 .sticker {
-    position: absolute;
-    bottom: 12.259615%; /* 51/416 */
-    left: 10.212766%; /* 48/470 */
+    position: relative;
     z-index: 1;
 }
 
@@ -209,19 +219,30 @@ body {
 
 .get-started__body {
     background-color: #FDF0E9;
-    padding: 92px 83px 64px 100px;
+    padding: 0px 83px 0px 100px;
     border-radius: 6px;
-    max-height: 336px;
+    min-height: 336px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
 }
-
-.get-started__star {
+.get-started__body::before {
+    content: '';
+    background-image: url(../img/get/star.svg);
     position: absolute;
     width: 148px;
     height: 148px;
     left: 7.179487%; /* 84/1170 */
     top: -22.02381%; /* 74/336 */
-    animation: rolling 7s linear infinite;
+    animation: puls 3s  infinite;
+}
+
+.get-started__content {
+    flex-basis: 250px;
+    padding-top: 92px;
+    margin-right: 64px;
 }
 
 .get-started__label:not(:last-child) {
@@ -243,23 +264,53 @@ body {
 }
 
 .get-started__block {
-    position: absolute;
-    width: 338px;
-    height: 192px;
-    left: 36.410256%; /* 426/1170 */
-    top: 16.964286%; /* 57/336 */;
+    padding-top: 57px;
+    flex: 0 0 338px;
+    min-height: 176px;
+    margin-right: 84px;
+    position: relative;
+    z-index: 1;
 }
-
 .get-started__block img {
     max-width: 100%;
+}
+.get-started__block::before,
+.get-started__block::after {
+    content: '';
+    min-height: 176px;
+    
+    background-color: #fff;
+    justify-self: center;
+    position: absolute;
+
+}
+
+.get-started__block::before {
+    max-width: 306px;
+    width: 100%;
+    left: 16px;
+    top: 65px;
+    /* background-color: yellow; */
+    z-index: -1;
+}
+
+.get-started__block::after {
+    max-width: 274px;
+    width: 100%;
+    left: 32px;
+    top: 73px;
+    z-index: -2;
+    /* background-color: #EF6D58; */
+    justify-self: center;
+    margin: 0 auto;
 }
 
 .get-started__line {
     position: absolute;
-    width: 282px;
-    height: 242px;
-    top: 13.988095%; /* 47/336 */
+    flex: 0 0 282px;
+    min-height: 242px;
     right: 7.094017%; /* 83/1170 */
+    bottom: 13.988095%; /* 47/336 */
 }
 
 .get-started__line img {
@@ -267,11 +318,10 @@ body {
 }
 
 .get-started__girl {
-    position: absolute;
-    width: 239px;
-    height: 396px;
-    top: -17.857143%; /* 60/336 */
-    right: 7.094017%; /* 83/1170 */
+    margin-top: -60px;
+    flex: 0 0 239px;
+    max-height: 396px;
+    z-index: 1;
 }
 
 .get-started__girl img {
@@ -287,20 +337,32 @@ body {
     }
 }
 
-@keyframes rolling {
+@keyframes puls {
     0% {
-        transform: rotate(0deg);
+
+        transform: scale(1);
     }
     50% {
-        /* transform: rotate(20deg); */
+        transform: scale(1.2);
     }
     100% {
         
-        transform: rotate(360deg);
     }
-
 }
 
+@keyframes moove {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.015);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 /*=events===========================*/
 .page__events {
     padding-block: 70px;
@@ -473,6 +535,7 @@ body {
     border-radius: 6px;
     overflow: hidden;
     flex: 0 1 570px;
+    min-height: 448px;
 }
 
 .founder__content {
