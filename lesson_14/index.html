@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson №14</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">Lesson №14</h1>
+            </div>   
+        </header>
+        <main class="page">
+            <div class="page__cinema cinema">
+                <div class="cinema__container">
+                    <div class="cinema__inner">
+                        <form class="cinema__form form-cinema" action="#" enctype="multipart/form-data">
+                            <div class="form-cinema__row">
+                                <div class="form-cinema__line">
+                                    <label class="form-cinema__label" for="first-name">First Name</label>
+                                    <input class="form-cinema__input" id="first-name" type="text" placeholder="Enter First Name" name="form[]" required>
+                                </div>
+                                <div class="form-cinema__line">
+                                    <label class="form-cinema__label" for="last-name">Last Name</label>
+                                    <input class="form-cinema__input" id="last-name" type="text" placeholder="Enter Last Name" name="form[]" required>
+                                </div>
+                            </div>
+                            <div class="form-cinema__row">
+                                <div class="form-cinema__line">
+                                    <label class="form-cinema__label" for="email">Email</label>
+                                    <input class="form-cinema__input" id="email" type="email" placeholder="Enter your Email" name="form[]" required>
+                                </div>
+                                <div class="form-cinema__line">
+                                    <label class="form-cinema__label" for="number">Phone Number</label>
+                                    <input class="form-cinema__input" id="number" type="text" placeholder="Enter Phone Number" name="form[]" required>
+                                </div>
+                            </div>
+                            <div class="form-cinema__line form-cinema__line--big">
+                                <label for="message">Message</label>
+                                <textarea class="form-cinema__field" name="form[]" id="message" placeholder="Enter your Message"></textarea>
+                            </div>
+                            <div class="form-cinema__row form-cinema__row--big-gap">
+                                <div class="form-cinema__checkbox checkbox">
+                                    <input class="checkbox__input" type="checkbox" id="agreement">
+                                    <label class="checkbox__label" for="agreement">I agree with Terms of Use and Privacy Policy</label>
+                                </div>
+                                <button class="form-cinema__button" type="button">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="page__portfolio portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__inner">
+                        <div class="portfolio__blank">
+                            <div class="form-portfolio__text">
+                                <p>
+                                    There are many variations of passages of Lorem Ipsu available, but the majority have suffered alte.
+                                </p>
+                            </div>
+                            <form class="portfolio__form form-portfolio" action="#" enctype="multipart/form-data">
+                                
+                                <div class="form-portfolio__line">
+                                    <input class="form-portfolio__input" type="text" placeholder="Name*" required name="form[]">
+                                </div>
+                                <div class="form-portfolio__line">
+                                    <input class="form-portfolio__input" type="text" placeholder="Email*" required name="form[]">
+                                </div>
+                                <div class="form-portfolio__line">
+                                    <input class="form-portfolio__input" type="text" placeholder="Location" name="form[]">
+                                </div>
+                                <div class="form-portfolio__row">
+                                    <div class="form-portfolio__line form-portfolio__line--small">
+                                        <input class="form-portfolio__input" type="text" placeholder="Budget*" required name="form[]">
+                                    </div>
+                                    <div class="form-portfolio__line form-portfolio__line--big">
+                                        <input class="form-portfolio__input" type="text" placeholder="Subject*" required name="form[]">
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="form-portfolio__line">
+                                    <input class="form-portfolio__input" type="text" placeholder="Message*" required name="form[]">
+                                </div>
+                            </form>
+                            <button class="portfolio__button" type="button">Submit <span></span></button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__copy">
+                    <p>
+                        copyright © 2024
+                    </p>
+                </div>
+            </div>        
+        </footer>
+    </div>
+    
+</body>
+
+</html>
