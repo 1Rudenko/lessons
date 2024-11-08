@@ -38,16 +38,16 @@
                                     <input class="form-cinema__input" id="number" type="text" placeholder="Enter Phone Number" name="form[]" required>
                                 </div>
                             </div>
-                            <div class="form-cinema__line form-cinema__line--big">
+                            <div class="form-cinema__row form-cinema__row--big">
                                 <label for="message">Message</label>
                                 <textarea class="form-cinema__field" name="form[]" id="message" placeholder="Enter your Message"></textarea>
                             </div>
                             <div class="form-cinema__row form-cinema__row--big-gap">
                                 <div class="form-cinema__checkbox checkbox">
-                                    <input class="checkbox__input" type="checkbox" id="agreement">
-                                    <label class="checkbox__label" for="agreement">I agree with Terms of Use and Privacy Policy</label>
+                                    <input class="checkbox__input" type="checkbox" id="agreement" required>
+                                    <label class="checkbox__label" for="agreement" required>I agree with Terms of Use and Privacy Policy</label>
                                 </div>
-                                <button class="form-cinema__button" type="button">Send Message</button>
+                                <button class="form-cinema__button" type="submit">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -85,10 +85,10 @@
                                 </div>
     
                                 <div class="form-portfolio__line">
-                                    <input class="form-portfolio__input" type="text" placeholder="Message*" required name="form[]">
+                                    <input class="form-portfolio__input form-portfolio__input--padding" type="text" placeholder="Message*" required name="form[]">
                                 </div>
                             </form>
-                            <button class="portfolio__button" type="button">Submit <span></span></button>
+                            <button class="portfolio__button" type="submit">Submit <span></span></button>
                         </div>
                     </div>
                     

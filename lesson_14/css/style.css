@@ -28,9 +28,6 @@ body {
 }
 
 
-
-
-
 /*=header===========================*/
 .header {
     text-align: center;
@@ -90,15 +87,16 @@ body {
 }
 
 .form-cinema__line {
-    flex: 1 0 calc(50% - 10px) ;
+    flex: 1 0 350px ;
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
 }
 
-.form-cinema__line--big {
-    
+.form-cinema__row--big {
+    flex-direction: column;
+    gap: 12px;
 }
 
 .form-cinema__label {
@@ -141,6 +139,7 @@ body {
 
 .checkbox__input:focus-visible + .checkbox__label {
     outline: 1px solid #fff;
+    required
 }
 
 .checkbox__input:checked + .checkbox__label::before {
@@ -175,9 +174,12 @@ body {
     padding: 14px 20px;
     text-transform: capitalize;
     border-radius: 6px;
+    transition: background-color 0.3s;
 }
 
-
+.form-cinema__button:hover {
+    background-color: #930d0d;
+}
 /*=portfolio===========================*/
 .page__portfolio {
     padding-block: 40px;
@@ -231,9 +233,13 @@ body {
 .form-portfolio__input {
     border-bottom: 1.5px solid #E6E8EB;
     width: 100%;
-    padding: 5px 10px 14px;
+    padding: 0px 10px 14px 0px;
     transition: color 0.3s;
     color: #1E1E1E;
+}
+
+.form-portfolio__input--padding {
+    padding-bottom: 24px;
 }
 
 .form-portfolio__input::placeholder {
@@ -241,12 +247,12 @@ body {
 }
 
 .form-portfolio__line--small {
-    flex: 1 0 calc(40% - 24px);
+    flex: 1 0 200px;
     width: 100%;
 }
 
 .form-portfolio__line--big {
-    flex: 1 0 60%;
+    flex: 1 0 336px;
     width: 100%;
 }
 
@@ -282,6 +288,7 @@ body {
     font-size: 14px;
     line-height: 1;
     font-weight: 600;
+    transition: background-color 0.3s;
 }
 
 .portfolio__button:hover {
