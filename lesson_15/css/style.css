@@ -255,10 +255,6 @@ body {
     border-radius: 6px;
     min-height: 336px;
     position: relative;
-    /* display: flex; */
-    justify-content: space-between;
-    /* gap: 10px; */
-    
 }
 
 .get-started__body::before {
@@ -276,7 +272,8 @@ body {
 
 
 .get-started__inner {
-    padding-block: 80px 20px;
+    /* padding-block: 80px 20px; */
+    padding-block: 80px 64px;
 }
 
 .get-started__content:not(:last-child) {
@@ -303,10 +300,11 @@ body {
 }
 
 .get-started__block {
-    /* flex: 0 0 338px; */
+    flex: 0 0 338px;
     min-height: 176px;
     position: relative;
     z-index: 1;
+    /* aspect-ratio: 338 / 192; */
 }
 
 
@@ -352,22 +350,23 @@ body {
 
 
 .get-started__girl {
-    flex: 0 0 239px;
     max-height: 396px;
     z-index: 1;
     align-self: self-end;
     position: relative;
-    aspect-ratio:  239 / 396;
+    aspect-ratio:  295 / 396;
+    padding-left: 56px;
 }
 
 .get-started__girl img {
     max-width: 100%;
+    /* aspect-ratio:  239 / 396; */
 }
 
 .get-started__girl::after {
     content: '';
     width: 282px;
-    /* height: 242px; */
+    height: 242px;
     aspect-ratio: 282 / 242;
     background: url(../img/get/line.svg) no-repeat;
     /* top: 47px; */
@@ -609,28 +608,30 @@ body {
 
 .founder__label {
     position: relative;
+    /* z-index: 1; */
 }
 
 .founder__label:not(:last-child) {
     margin-bottom: 33px;
 }
 
-.founder__label::before {
+.founder__label::after {
     content: '';
     background: url(../img/founder/quote.png) 0 0 / 100px no-repeat;
     width: 100px;
     height: 80px;
     position: absolute;
     top: 9px;
-    left: 68.93617%; /* 324/470 */
-    z-index: -1;
+    top: 28.12%;
+    right: 10.63%;
 }
 
 .founder__blockquote {
     font-weight: 800;
     font-size: 40px;
     line-height: 1.2; /* 48/40 */
-    
+    position: relative;
+    z-index: 1;
 }
 
 .founder__blockquote:not(:last-child) {
@@ -902,6 +903,10 @@ page__button span {
         padding-inline: 60px;
     }
 
+    .get-started__body::before {
+        top: -17%;
+    }
+
     .get-started__inner {
         padding-block: 50px 30px;
     }
@@ -926,11 +931,15 @@ page__button span {
     .get-started__body {
         display: flex;
         gap: 10px;
+        justify-content: space-between;
     }
    
+
+    
     .get-started__girl {
         margin-top: -30px;
-        
+        flex: 0 0 239px;
+        flex: 0 0 294px;
     }
 
     .founder__image {
@@ -961,6 +970,10 @@ page__button span {
         padding: 30px;
     }
     
+    .get-started__body::before {
+        top: -8%;
+    }
+
     .get-started__content:not(:last-child) {
         margin-bottom: 50px;
     }
@@ -970,7 +983,6 @@ page__button span {
         aspect-ratio: 338 /176;
     }
 
-   
 
 }
 
