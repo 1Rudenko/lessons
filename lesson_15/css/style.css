@@ -362,9 +362,11 @@ body {
 .get-started__girl::after {
     content: '';
     width: 282px;
+    width: 95.6%;
     height: 242px;
+    height: 61.1%;
     aspect-ratio: 282 / 242;
-    background: url(../img/get/line.svg) no-repeat;
+    background: url(../img/get/line.svg) left center / contain no-repeat;
     /* top: 47px; */
     top: 27%;
     right: 5%;
@@ -535,7 +537,6 @@ body {
     
 }
 .item-team {
-    
     flex: 0 0 270px;
 }
 
@@ -555,9 +556,9 @@ body {
 }
 
 .item-team__image img {
-    /* align-self: flex-end; */
-    /* width: 100%; */
+    max-width: 100%;
 }
+
 .item-team__autor {
     font-size: 24px;
     line-height: 1.33; /* 32/24 */
@@ -924,18 +925,14 @@ page__button span {
 }
 
 @media (min-width: 767.98px) {
-  
-
     .get-started__body {
         display: flex;
         gap: 10px;
         justify-content: space-between;
     }
-   
-
     
     .get-started__girl {
-        margin-top: -30px;
+        /* margin-top: -30px; */
         flex: 0 0 239px;
         flex: 0 0 294px;
     }
