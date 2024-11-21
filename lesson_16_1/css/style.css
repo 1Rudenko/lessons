@@ -59,11 +59,20 @@ body {
 .button--colored {
     padding-inline: 23px;
     background-color: #EF6D58;
+    transition: background-color 0.3s;
+}
+
+.button--colored:hover {
+    background-color: #e82609;
 }
 
 .button--transparent {
     padding-inline: 23px;
-    
+    transition: background-color 0.3s;
+}
+
+.button--transparent:hover {
+    background-color: #777aca;
 }
 
 .subtitle {
@@ -107,7 +116,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 80px;
     z-index: 60;
 }
 
@@ -137,10 +146,6 @@ body {
 
 .header__menu {}
 
-/* .menu {
-    flex-basis: 515px;
-    flex-shrink: 1;
-} */
 
 .menu__list {
     display: flex;
@@ -166,10 +171,12 @@ body {
 .header__button {
     padding-inline: 38px;
     border-color: rgba(255, 255, 255, 0.30);
+    transition: background-color 0.3s color 0.3s;
 }
 
-.header_button:hover {
+.header__button:hover {
     color: rgb(255, 255, 255, 0.8);
+    background-color: #777aca;
 }
 
 /*=hero=============================*/
@@ -184,11 +191,12 @@ body {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
+    row-gap: 50px;
 }
 
 .hero__content {
-    flex: 0 1 50%;
-
+    flex: 1 0 48.71%;
+    padding-top: 10px;
 }
 
 .hero__heading {
@@ -199,11 +207,12 @@ body {
 .hero__heading:after {
     content: '';
     position: absolute;
-    width: 148px;
-    height: 148px;
+    max-width: 148px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background: url(../img/hero/star.svg) top right no-repeat;
-    top: 0;
-    right: 0;
+    top: 22px;
+    left: 278px;
     z-index: -1;
 }
 
@@ -234,12 +243,6 @@ body {
     margin-bottom: 108px;
 }
 
-.hero__button {
-}
-.button {
-}
-.button--transparent {
-}
 .button--colored {
     align-self: center;
 }
@@ -284,9 +287,130 @@ body {
 .blockquote__autor {
 }
 
-.hero__block {
-    flex: 0 1 50%;
+.hero__images {
+    flex: 0 0 48.71%;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    max-width: 570px;
 }
+
+.images-hero {
+}
+
+.images-hero__center::before {
+    content: '';
+    border-radius: 50%;
+    background-color: #32334C;
+    /* width: 370px; */
+    width: 64.91%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: calc(50% - 185px);
+    top: 17.55%;
+    left: calc(50% - 185px);
+    left: 17.55%;
+    z-index: -1;
+}
+
+.images-hero__left-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 43.16%;
+    aspect-ratio: 246 / 305;
+    background-color: #B550F8;
+    border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
+}
+
+.images-hero__left-top img {
+    position: absolute;
+    left: 8.53%;
+    top: 7.86%;
+    width: 100%;
+    max-width: 255px;
+    aspect-ratio: 255 / 265;
+
+    
+}
+
+.images-hero__right-midle {
+    position: absolute;
+    right: 0;
+    bottom: 13.33%;
+    /* width: 246px; */
+    width: 43.16%;
+    aspect-ratio: 246 / 305;
+    background-color: #F7CC47;
+    border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
+}
+
+.images-hero__right-midle img {
+    width: 100%;
+}
+
+.images-hero__left-bottom {
+    position: absolute;
+    left: 6.14%;
+    bottom: 4.74%;
+    width: 37.54%;
+    aspect-ratio: 214 / 112;
+}
+
+.images-hero__left-bottom img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.images-hero__top {
+    position: absolute;
+    left: 50.7%;
+    top: 7%;
+    border-radius: 50%;
+    width: 19.65%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.images-hero__top img {
+    width: 100%;
+}
+
+.images-hero__left-midle {
+    position: absolute;
+    left: 0;
+    bottom: 27.37%;
+    width: 24.91%;
+    aspect-ratio: 142 / 73;
+}
+
+.images-hero__left-midle img {
+    width: 100%;
+}
+
+.images-hero__right-top {
+    position: absolute;
+    right: 0;
+    top: 14%;
+    width: 19.65%;
+    aspect-ratio: 112 / 82;
+}
+
+.images-hero__right-top img {
+    width: 100%;
+}
+
+.images-hero__right-bottom {
+    position: absolute;
+    right: 28.77%;
+    bottom: 0;
+    width: 14.39%;
+    aspect-ratio: 82 / 50;
+}
+
+.images-hero__right-bottom img {
+    width: 100%;
+}
+
 /*=footer============================*/
 .footer {
     text-align: center;  
@@ -312,6 +436,14 @@ body {
     }
     .menu__list {
         column-gap: 50px;
+    }
+
+    .hero__container {
+        flex-direction: column-reverse;
+    }
+
+    .section-heading__title-big {
+        font-size: 64px;
     }
 }
 
