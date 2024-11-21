@@ -292,6 +292,7 @@ body {
     position: relative;
     aspect-ratio: 1 / 1;
     max-width: 570px;
+    align-self: flex-start;
 }
 
 .images-hero {
@@ -327,7 +328,7 @@ body {
     left: 8.53%;
     top: 7.86%;
     width: 100%;
-    max-width: 255px;
+    /* max-width: 255px; */
     aspect-ratio: 255 / 265;
 
     
@@ -436,6 +437,11 @@ body {
     }
     .menu__list {
         column-gap: 50px;
+    }
+
+    .hero__images {
+        align-self: auto;
+
     }
 
     .hero__container {
