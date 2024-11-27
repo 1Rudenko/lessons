@@ -261,6 +261,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    transition: opacity 0.3s ;
 }
 
 .box-agency__item img {
@@ -317,6 +318,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    transition: opacity 0.3s ;
 }
 
 .box-agency-grid__item  img{
@@ -369,6 +371,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    transition: opacity 0.3s;
 }
 
 .portfolio__item:hover::after{
