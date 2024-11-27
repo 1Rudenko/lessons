@@ -80,7 +80,7 @@ body {
 
 .sticker {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .sticker__label {
