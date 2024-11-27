@@ -108,6 +108,10 @@ body {
     line-height: 1.14; /* 64/56 */
 }
 
+.menu-block__drop {
+    display: none;
+}
+
 .menu-block__list {
     display: flex;
     gap: 20px 60px;
@@ -238,11 +242,25 @@ body {
 
 .box-agency__item {
     position: relative;
-    flex: 0 0 40.17%;
+    flex: 1 1 40%;
     aspect-ratio: 470 / 416;
-    padding: 51px 48px;
+    padding: 42px;
     display: flex;
     align-items: end;
+    overflow: hidden;
+}
+
+.box-agency__item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #5c2000;
+    opacity: 0.31;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .box-agency__item img {
@@ -252,7 +270,12 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 6px;
+    object-fit: cover;
 
+}
+
+.box-agency__item:hover:after {
+    opacity: 0.2;
 }
 
 .agency__grid-box:not(:last-child) {
@@ -266,11 +289,14 @@ body {
     margin: 0 auto;
 }
 
+/*===============================================*/
+
 .agency__grid-box {
     display: grid;
-    grid-template-columns: 0.4234fr 0.1532fr 0.4234fr;
-    /* grid-template-rows: repeat(1, 416px); */
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(329px, 1fr));
     grid-auto-rows: 416px;
+    
     gap: 30px;
 }
 
@@ -280,12 +306,17 @@ body {
     align-content: end;
 }
 
-.box-agency-grid__item:nth-child(4n + 3) {
-    grid-column: span 2;
-}
-
-.box-agency-grid__item:nth-child(4n + 2) {
-    grid-column: span 2;
+.box-agency-grid__item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #5c2000;
+    opacity: 0.31;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .box-agency-grid__item  img{
@@ -295,11 +326,16 @@ body {
     left: 0;
     top: 0;
     border-radius: 6px;
+    object-fit: cover;
+}
+
+.box-agency-grid__item:hover:after {
+    opacity: 0.2;
 }
 
 /*=portfolio==========================*/
 .page__portfolio {
-    padding-block: 290px 20px;
+    padding-block: 68px;
     background-color: #F2F2F2;
 }
 
@@ -310,31 +346,47 @@ body {
 .portfolio__items {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(2, 0.5fr);
-    grid-template-rows: repeat(1, 720px);
+    grid-template-columns: repeat(auto-fill,minmax(329px, 1fr));
     grid-auto-rows: 416px;
-    
 }
 
 .portfolio__item {
     position: relative;
     padding: 51px 48px;
     align-content: end;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.portfolio__item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #5c2000;
+    opacity: 0.31;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.portfolio__item:hover::after{
+    opacity: 0.2;
 }
 
 .portfolio__item img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
-
 }
 
-.portfolio__item:nth-child(1) {
+/* .portfolio__item:nth-child(1) {
     grid-column: span 2;
-}
+} */
 
 /*=footer============================*/
 .footer {
@@ -355,14 +407,39 @@ body {
 
 /*=============================*/
 @media (min-width: 991.98px) {
+    .box-agency__item {
+        padding: 51px 48px;
+    }
+
     .box-agency__item:nth-child(4n + 2),
     .box-agency__item:nth-child(4n + 3) {
-        flex: 0 0 57.26%;
+        flex: 0 1 56%;
         aspect-ratio: 670 / 416;
     }
+
+    .agency__grid-box {
+        grid-template-columns: 0.4234fr 0.1532fr 0.4234fr;
+    }
+
+    .box-agency-grid__item:nth-child(4n + 3) {
+        grid-column: span 2;
+    }
+    
+    .box-agency-grid__item:nth-child(4n + 2) {
+        grid-column: span 2;
+    }
+    
 }
 
 @media (max-width: 991.98px) {
+    
+    .sticker__label:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    .sticker__title {
+        font-size: 36px;
+    }
+
     .header__logo {
         /* flex-basis: ; */
     }
@@ -375,7 +452,7 @@ body {
         line-height: 1.2; /* 48/40 */
     }
 
-    .portfolio__items {
+    /* .portfolio__items {
         grid-template-columns: repeat(1, minmax(329px, 570px));
         grid-template-rows: repeat(1, 416px);
         justify-content: center; 
@@ -383,14 +460,28 @@ body {
     
     .portfolio__item:nth-child(1) {
         grid-column: auto;
-    }
+    } */
 
     .portfolio__item img {
         object-fit: cover;
     }
 }
 
+@media (min-width: 767.98px) {
+    .portfolio__items {
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: repeat(1, 720px);
+    }
+
+    .portfolio__item:nth-child(1) {
+        grid-column: span 2;
+    }
+}
+
 @media (max-width: 767.98px) {
+    .sticker__title {
+        font-size: 32px;
+    }
 
     .header__logo {
         position: relative;
@@ -497,7 +588,62 @@ body {
     .open-menu .header__menu::after {
         left: 0;
     }
+
+    .menu-block__list {
+        column-gap: 30px;
+    }
+
+    .box-agency__item {
+        aspect-ratio: 329 / 416;
+    }
 }   
+
+@media (max-width: 539.98px) {
+    
+    .menu-block__drop {
+        position: relative;
+        display: block;
+    }
+
+    .menu-block__drop::after {
+        content: '';
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        width: 10px;
+        height: 6px;
+        transform: translateY(-50%);
+        background: url(../img/agency/triagle.svg) center no-repeat;
+    }
+
+    .menu-block__select {
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        color: rgb(57, 20, 0, 0.64);
+        padding: 6px 17px;
+        border-radius: 6px;
+        appearance: none;
+        position: relative;
+        border: 1px solid transparent;
+    }
+    
+    .menu-block__select--border {
+        border-color: #F3D1BF;
+    }
+
+    .menu-block__list {
+        display: none;
+    }
+
+    .agency__flex-box {
+        flex-direction: column;
+    }
+    .box-agency__item {
+        /* aspect-ratio: 329 / 416; */
+        min-height: 416px;
+    }
+}
 
 @media (max-width: 429.98px) {
     .header__button {
