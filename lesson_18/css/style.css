@@ -498,7 +498,7 @@ body {
     }
 
     .page__hero {
-        padding-block: 100px 50px;
+        padding-block: 20px 50px;
         
     }
 
@@ -509,6 +509,10 @@ body {
 
     .hero__content:not(:last-child) {
         margin-bottom: 50px;
+    }
+
+    .hero__title {
+        font-size: 42px;
     }
 
     .page__about {
