@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Epilogue:regular,700,800,900&display=swap');
+@import url('fonts.css');
+@import url('reset.css');
+
+
+body { 
+    font-family: 'Epilogue', sans-serif;
+    color: rgb(57, 20, 0, 0.64);
+    line-height: 2.0;
+    height: 100vh;
+    background-color: #FDF0E9;
+}
+
+[class*='__container'] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+[class*='__container-big'] {
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 0 auto;
+}
+
+.block-name {
+    text-align: center;
+}
+
+.block-name--left {
+    text-align: left;
+}
+
+.block-name__label,
+.label {
+    text-transform: uppercase;
+    color: #EF6D58;
+    letter-spacing: 3px;
+}
+
+.block-name__label:not(:last-child) {
+    margin-bottom: 20px;
+}
+.block-name__title {
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 56px;
+    line-height: 1.14; /* 64/56 */
+    text-transform: capitalize;
+}
+
+.sticker__btn {
+    background-color: #fff;
+    color: #391400;
+    border-radius: 19px;
+    padding: 5px 15px 1px;
+    transition: box-shadow 0.3s;
+    text-align: center;
+    display: inline-block;
+}
+
+.sticker__btn:not(:last-child) {
+    margin-bottom: 23px;
+}
+
+.sticker__btn:hover {
+    box-shadow: inset 0px  0px 5px #391400;
+}
+.sticker__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.2; /* 48/40 */
+    transition: color 0.7s;
+}
+
+.sticker__title:hover {
+    color:  rgb(57, 20, 0, 0.6);
+}
+.button {
+    background-color: transparent;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    padding: 18px 31px 16px;
+    border-radius: 6px;
+    text-align: center;
+    align-self: center;
+    transition: background-color 0.3s, color 0.4s;
+}
+
+.button--colored {
+    background-color: #EF6D58;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    color: #1c2737;
+}
+
+.block-header {
+    padding-block: 15.5px;
+}
+
+.block-header__title {
+    font-weight: 700;
+    font-size: 38px;
+    color: #ffff;
+    text-transform: capitalize;
+    text-align-last: left;
+}
+
