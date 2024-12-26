@@ -32,7 +32,7 @@ body {
 
 .title {
     /* font-size: 3rem; */
-    font-size: clamp(2rem, 3.3vw, 3rem) ;
+    font-size: clamp(2.125rem, 3.6363vw, 3rem) ;
     line-height: 1.167; /* 56/48 */
 
 }
@@ -227,6 +227,7 @@ body {
 
 .hero__title {
     font-size: 4.125rem;
+    font-size: clamp(2.875rem, 5.5vw, 4.5rem);
     line-height: 1.166;
 
 }
@@ -350,8 +351,10 @@ body {
 .about__inner {
     padding:4rem 3rem 2rem;
     display: flex;
-    gap: 8.5rem;
-    column-gap: clamp(1.25rem, 32.402vw - 18.839rem, 8.5rem);
+    /* column-gap: clamp(1.25rem, 32.4vw - 18.839rem, 8.5rem); */
+    /* column-gap: clamp(1.25rem, 2.34vw, 8.5rem); */
+    /* column-gap: 8.5rem; */
+    column-gap: clamp(2rem, -9.156rem + 20.93vw, 8.5rem);
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
@@ -391,7 +394,8 @@ body {
 }
 
 .about__title {
-    font-size: 2.375rem;
+    /* font-size: 2.375rem; */
+    font-size: clamp(2rem, 2.879vw, 2.375rem);
     line-height: 1.315; /* 50/38 */
 }
 
@@ -625,7 +629,7 @@ body {
 
 .portfolio__items {
     display: grid;
-    grid-template-columns: repeat(3, minmax(17.8125rem, 26.5rem));
+    grid-template-columns: repeat(auto-fill, minmax(19.8125rem,1fr));
     gap: 1.5rem;
 }
 
@@ -641,7 +645,8 @@ body {
 }
 
 .portfolio__image {
-    max-width: 26.5rem;
+    /* max-width: 26.5rem; */
+    width: 100%;
     aspect-ratio: 424 / 248;
 }
 
@@ -814,7 +819,8 @@ body {
 
 .blog__items {
     display: grid;
-    grid-template-columns: repeat(4, minmax(9.375rem, 19.5rem));
+    /* grid-template-columns: repeat(4, minmax(9.375rem, 19.5rem)); */
+    grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
     gap: 1.5rem;
 }
 
@@ -825,7 +831,7 @@ body {
 }
 
 .blog__image {
-    max-width: 19.5rem;
+    width: 100%;
     aspect-ratio: 312 / 226;
 }
 
@@ -859,15 +865,15 @@ body {
     background-color: #F0F1F3;
 }
 
-.what__container {
+/* .what__container {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
-}
+} */
 
-.what__content {
-    flex: 0 1 40%;
+.what__content:not(:last-child) {
+    margin-bottom: 2rem;
 }
 
 .what__title:not(:last-child) { 
@@ -884,9 +890,6 @@ body {
 .what__button {
 }
 
-.what__items {
-    flex: 0 1 49.09%;
-}
 
 .what__item {
     background-color: #fff;
@@ -952,12 +955,13 @@ body {
     justify-content: space-between;
     gap: 1.5rem;
     flex-wrap: wrap;
+    padding-block: 2.9688rem;
 }
 
 .clients__link { 
     display: flex;
-    flex: 0 1 12.5rem;
-    aspect-ratio: 1;
+    flex: 1 1 12.5rem;
+    padding: 1.875rem;
     align-items: center;
     justify-content: center;
 }
@@ -1083,7 +1087,7 @@ body {
 
 
 .lets__title {
-    font-size: 2.375rem;
+    font-size: clamp(2rem, 3.3vw, 2.375rem);
     line-height: 1.32;
 }
 
@@ -1270,9 +1274,9 @@ body {
         row-gap: 8.875rem;
     }
 
-    .hero__title {
+    /* .hero__title {
         font-size: 4.5rem;
-    }
+    } */
 
     .about__inner {
         padding: 7rem;
@@ -1286,6 +1290,7 @@ body {
     .portfolio__container {
         padding-block: 6.25rem;
     }
+
     .page__clients {
         padding-block: 6.25rem;
     }
@@ -1419,11 +1424,6 @@ body {
         justify-content: center;
     }
 
-    /* .about__inner {
-        flex-direction: column-reverse;
-        row-gap: 3rem;
-    } */
-
     .work__container {
         flex-direction: column;
         row-gap: 3.125rem;
@@ -1433,10 +1433,54 @@ body {
         flex-shrink: 1;
     }
 
+    .lets__container {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .lets__contacts {
+        display: flex;
+        column-gap: 1.25rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     .footer__menu {
         display: none;
     }
 }   
+
+@media (min-width: 53.3125em) {
+    .what__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+
+    .what__content {
+        flex: 0 1 40%;
+    }
+    
+    .what__items {
+        flex: 0 1 49.09%;
+    }
+    
+
+
+}
+
+
+@media (max-width: 53.3125em) {
+    .about__inner {
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+    }
+
+   
+}
 
 @media (max-width: 26.8738em) {
     .header__button {
