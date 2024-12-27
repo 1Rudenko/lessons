@@ -117,6 +117,11 @@ body {
     z-index: 5;
 }
 
+.header__logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
 /* .header__menu {
     margin-left: auto;
 } */
@@ -257,7 +262,7 @@ body {
 
 .hero__items {
     display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 214px));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 0.1875rem;
 }
 
@@ -435,7 +440,6 @@ body {
 .about__social {
     display: flex;
     max-width: 16.5rem;
-    
     padding: 0.75rem;
     background-color: #fff;
     border-radius: 0.25rem;
@@ -447,15 +451,16 @@ body {
 }
 
 
-
+.social__item {
+    flex-basis: 3rem;
+}
 
 .social__link {
     display: flex;
-    /* flex: 0 0 3rem; */
-    max-width: 3rem;
     width: 100%;
     aspect-ratio: 1;
     padding: 0.9375rem;
+    padding: clamp(0.5rem, 0.364rem + 0.68vw, 0.938rem);
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -465,6 +470,7 @@ body {
 
 .social__link svg {
     max-width: 1.25rem;
+    /* min-width: 0.5rem; */
     width: 100%;
     aspect-ratio: 1;
     object-fit: contain;
@@ -494,42 +500,24 @@ body {
 
 .work__container {
     display: flex;
-    gap: 1rem;
+    /* gap: 1rem; */
+    column-gap: clamp(1.875rem, -17.695rem + 31.56vw, 8.938rem);
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-
-
-
 .work__content {
     flex: 0 1 40.08%;
-
 }
-
-/* .work__items {
-    flex: 0 1 49%;
-    display: flex;
-    gap: 1.5rem;
-} */
 
 .work__items {
     flex: 0 1 49%;
     display: grid;
-    grid-template-columns: repeat(2, minmax(15rem, 19.5rem));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     column-gap: 1.5rem;
+    
 }
-
-/* .work__column {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-}
-
-.work__column:nth-child(2) {
-    padding-top: 1.5rem;
-} */
 
 .work__item {
     padding: 2rem;
@@ -630,6 +618,7 @@ body {
 .portfolio__items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(19.8125rem,1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(16.875rem,1fr)); */
     gap: 1.5rem;
 }
 
@@ -825,13 +814,21 @@ body {
 }
 
 .blog__item {
+    /* width: 100%; */
     border: 0.0625rem solid #F0F1F3;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.75rem 4rem 0rem rgba(28, 25, 25, 0.12);
 }
 
-.blog__image {
+
+.blog__link {
     width: 100%;
+    /* aspect-ratio: 312 / 226; */
+}
+
+
+.blog__image {
+    /* width: 100%; */
     aspect-ratio: 312 / 226;
 }
 
@@ -1054,7 +1051,7 @@ body {
 }
 
 .lets__container {
-    padding: 5.5rem;
+    /* padding: 5.5rem; */
     background-color: #fff;
     display: flex;
     gap: 1rem;
@@ -1218,6 +1215,7 @@ body {
 
 .form__textarea {
     resize: vertical;
+    min-height: 3.7125rem;
 }
 
 .poll__button {
@@ -1250,6 +1248,7 @@ body {
     align-items: center;
     padding-block: 2rem;
     gap: 2rem;
+    flex-wrap: wrap;
 
 }
 .footer__menu {
@@ -1258,6 +1257,9 @@ body {
     flex-wrap: wrap;
 }
 
+.footer__logo img {
+    width: 100%;
+}
 /*=============================*/
 
 @media (min-width: 75em) {
@@ -1318,10 +1320,13 @@ body {
         margin-left: auto;
     }
 
+    .lets__container {
+        padding: 5.5rem;
+    }
     
 }
 
-@media (max-width: 61.9988rem) {
+@media (max-width: 61.9998rem) {
     .header__container {
         justify-content: space-between;
     }
@@ -1433,6 +1438,8 @@ body {
         flex-shrink: 1;
     }
 
+    
+
     .lets__container {
         flex-direction: column;
         row-gap: 2rem;
@@ -1451,6 +1458,7 @@ body {
     }
 }   
 
+
 @media (min-width: 53.3125em) {
     .what__container {
         display: flex;
@@ -1467,8 +1475,6 @@ body {
     .what__items {
         flex: 0 1 49.09%;
     }
-    
-
 
 }
 
@@ -1479,9 +1485,19 @@ body {
         row-gap: 2rem;
     }
 
-   
+    .portfolio__items {
+        grid-template-columns: repeat(auto-fill, minmax(16.875rem,1fr));
+    }
+    
 }
 
+@media (max-width: 30em) {
+    .logo {
+        max-width: 180px;
+        flex-basis: 180px;
+
+    }
+}
 @media (max-width: 26.8738em) {
     .header__button {
         display: none;
