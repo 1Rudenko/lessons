@@ -533,6 +533,7 @@ body {
 
 .work__item:nth-child(even) {
     margin-top: 1.5rem;
+    /* align-self: end; */
 }
 
 .work__icon {
@@ -1438,11 +1439,11 @@ body {
         flex-shrink: 1;
     }
 
-    
 
     .lets__container {
         flex-direction: column;
         row-gap: 2rem;
+        padding-block: 3rem;
     }
 
     .lets__contacts {
@@ -1485,18 +1486,52 @@ body {
         row-gap: 2rem;
     }
 
+    .page__work {
+        padding-block: 3rem;
+    }
+
+    .portfolio__container {
+        padding-block: 3rem;
+    }
+
     .portfolio__items {
         grid-template-columns: repeat(auto-fill, minmax(16.875rem,1fr));
     }
     
+    .page__action {
+        padding-block: 3rem;
+    }
+
+    .page__blog {
+        padding-block: 3rem;
+    }
+
+    .page__what {
+        padding-block: 3rem;
+    }
+
+    .page__clients {
+        padding-block: 3rem;
+    }
+
+    .clients__items {
+        gap: 1rem;
+    }
+
+    .clients__link {
+        padding: 1rem;
+    }
+
+
 }
 
 @media (max-width: 30em) {
     .logo {
         max-width: 180px;
         flex-basis: 180px;
-
     }
+
+    
 }
 @media (max-width: 26.8738em) {
     .header__button {
