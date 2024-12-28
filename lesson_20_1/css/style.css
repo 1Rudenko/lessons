@@ -354,11 +354,8 @@ body {
 }
 
 .about__inner {
-    padding:4rem 3rem 2rem;
+    padding: 3rem 0rem 2rem;
     display: flex;
-    /* column-gap: clamp(1.25rem, 32.4vw - 18.839rem, 8.5rem); */
-    /* column-gap: clamp(1.25rem, 2.34vw, 8.5rem); */
-    /* column-gap: 8.5rem; */
     column-gap: clamp(2rem, -9.156rem + 20.93vw, 8.5rem);
     align-items: center;
     justify-content: space-between;
@@ -367,21 +364,15 @@ body {
 }
 
 .about__block {
-    /* display: flex;
-    flex-direction: column;
-    flex: 0 1 38.69%; */
     flex: 1 0 38.69%;
 }
 
 .about__image {
-    /* flex: 0 1 auto; */
     width: 100%;
     aspect-ratio: 424 / 468;
     background-color: #F0F1F3;
     border-radius: 0.625rem;
     overflow: hidden;
-    /* display: flex;
-    align-items: flex-end; */
 }
 
 .about__image img {
@@ -514,8 +505,9 @@ body {
 .work__items {
     flex: 0 1 49%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     column-gap: 1.5rem;
+    /* row-gap: 1.5rem; */
     
 }
 
@@ -527,14 +519,7 @@ body {
 
 }
 
-.work__item:nth-child(odd) {
-    margin-bottom: 1.5rem;
-}
 
-.work__item:nth-child(even) {
-    margin-top: 1.5rem;
-    /* align-self: end; */
-}
 
 .work__icon {
     display: flex;
@@ -1325,6 +1310,16 @@ body {
         padding: 5.5rem;
     }
     
+    .work__item:nth-child(odd) {
+        margin-bottom: 1.5rem;
+        
+    }
+
+   
+    .work__item:nth-child(even) {
+        margin-top: 1.5rem;
+        /* align-self: end; */
+    }
 }
 
 @media (max-width: 61.9998rem) {
@@ -1435,9 +1430,13 @@ body {
         row-gap: 3.125rem;
     }
 
-    .work__item {
-        flex-shrink: 1;
+    .work__items {
+        row-gap: 1.5rem;
     }
+    
+    /* .work__item {
+        flex-shrink: 1;
+    } */
 
 
     .lets__container {
@@ -1531,7 +1530,20 @@ body {
         flex-basis: 180px;
     }
 
-    
+    .hero__button,
+    .about__button,
+    .body-portfolio__button,
+    .portfolio__button,
+    .what__button,
+    .poll__button {
+        width: 100%;
+    }
+
+    .footer__container {
+        justify-content: center;
+    }
+
+
 }
 @media (max-width: 26.8738em) {
     .header__button {
