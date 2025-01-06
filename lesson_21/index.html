@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson №21</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img src="img/header/logo.svg" alt="logo">
+                </div>
+                <div class="header__burger" aria-label="open menu">
+                    <span></span>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link active" href="#">Movies & Shows</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Support</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Subscriptions</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="header__action action">
+                    <li class="action__item">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.75 26.75L19.388 19.388M19.388 19.388C21.3108 17.4653 22.5 14.809 22.5 11.875C22.5 6.00697 17.743 1.25 11.875 1.25C6.00697 1.25 1.25 6.00697 1.25 11.875C1.25 17.743 6.00697 22.5 11.875 22.5C14.809 22.5 17.4653 21.3108 19.388 19.388Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </li>
+                    <li class="action__item">
+                        <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.0474 21.1991C19.7314 20.8807 22.3195 20.2497 24.7743 19.3435C22.7389 17.0841 21.5 14.093 21.5 10.8125V9.81968C21.5002 9.79648 21.5002 9.77325 21.5002 9.75C21.5002 5.05558 17.6947 1.25 13.0002 1.25C8.30582 1.25 4.50024 5.05558 4.50024 9.75L4.49996 10.8125C4.49996 14.093 3.26105 17.0841 1.22559 19.3435C3.68057 20.2498 6.26886 20.8808 8.95302 21.1992M17.0474 21.1991C15.7202 21.3565 14.3695 21.4375 13 21.4375C11.6306 21.4375 10.2801 21.3565 8.95302 21.1992M17.0474 21.1991C17.1791 21.6091 17.2502 22.0462 17.2502 22.5C17.2502 24.8472 15.3475 26.75 13.0002 26.75C10.653 26.75 8.75024 24.8472 8.75024 22.5C8.75024 22.0463 8.82135 21.6091 8.95302 21.1992" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                </ul>
+
+            </div>   
+        </header>
+        <main class="page">
+            <section class="page__hero hero">
+                <div class="hero__container">
+                    <div class="hero__inner">
+                        <div class="hero__image">
+                        <img class="hero__image" src="img/hero/hero.webp" alt="Poster with the image of the Avengers">
+                    </div>
+                    
+                    <div class="hero__content">
+                        <h1 class="hero__title title">
+                            Avengers : Endgame
+                        </h1>
+                        <div class="hero__text">
+                            <p>
+                                With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.
+                            </p>
+
+                        </div>
+                        <div class="hero__choice choice">
+                            <button class="choice__button button button--icon" type="button">
+                                <span></span>
+                                Play Now
+                            </button>
+                            <ul class="choice__items">
+                                <li class="choice__item">
+                                    <button class="choice__icon">
+                                        <svg viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5 1V15M15.5 8L1.5 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="choice__item">
+                                    <button class="choice__icon">
+                                        <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.238 10.9584C7.17874 10.9584 8.02756 10.4382 8.60811 9.69799C9.51014 8.54785 10.647 7.59067 11.9465 6.89862C12.789 6.44994 13.52 5.78337 13.8745 4.89712C14.1226 4.27699 14.25 3.61522 14.25 2.94732V2.20837C14.25 1.72512 14.6418 1.33337 15.125 1.33337C16.5747 1.33337 17.75 2.50863 17.75 3.95837C17.75 5.30194 17.4472 6.57478 16.9061 7.71236C16.5962 8.36376 17.0309 9.20837 17.7522 9.20837M17.7522 9.20837H21.399C22.5968 9.20837 23.6689 10.018 23.7957 11.209C23.8481 11.7016 23.875 12.2019 23.875 12.7084C23.875 16.0306 22.7178 19.0825 20.7845 21.4831C20.3323 22.0446 19.6332 22.3334 18.9123 22.3334H14.227C13.6627 22.3334 13.1021 22.2424 12.5668 22.064L8.93324 20.8528C8.39791 20.6743 7.83732 20.5834 7.27304 20.5834H5.38824M17.7522 9.20837H15.125M5.38824 20.5834C5.48485 20.822 5.58999 21.0564 5.70327 21.2859C5.93326 21.7521 5.61223 22.3334 5.09245 22.3334H4.03337C2.99654 22.3334 2.0349 21.729 1.73232 20.7373C1.33743 19.4431 1.125 18.0693 1.125 16.6459C1.125 14.8347 1.46894 13.1038 2.09507 11.515C2.45097 10.6119 3.36189 10.0834 4.33258 10.0834H5.5608C6.11138 10.0834 6.43019 10.7319 6.14435 11.2025C5.1802 12.7898 4.625 14.653 4.625 16.6459C4.625 18.0383 4.89604 19.3674 5.38824 20.5834Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="choice__item">
+                                    <button class="choice__icon">
+                                        <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.7997 4.57535C24.9002 8.67586 24.9002 15.3241 20.7997 19.4246M17.7064 7.66904C20.0984 10.061 20.0984 13.9391 17.7064 16.3311M6.375 7.62504L11.8813 2.11875C12.4325 1.56753 13.375 1.95793 13.375 2.73747V21.2626C13.375 22.0421 12.4325 22.4325 11.8813 21.8813L6.375 16.375H3.76056C2.73466 16.375 1.77356 15.7842 1.5011 14.7951C1.25595 13.9052 1.125 12.9679 1.125 12C1.125 11.0322 1.25595 10.0949 1.5011 9.20498C1.77356 8.21592 2.73466 7.62504 3.76056 7.62504H6.375Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hero__block block-header">
+                            <div class="block-header__control control-block control-block--wide">
+                                <div class="control-block__icon control-block__icon--left control-block__icon--dark">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                                <div class="control-block__dash">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="control-block__icon control-block__icon--dark ">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            <div class="page__movies movies">
+                <div class="movies__container">
+                    <a href="#" class="movies__button button">
+                        Movies
+                    </a>
+                    <section class="movies__genres genres">
+                        <div class="genres__block block-header">
+                            <h2 class="block-header__title title">Our Genres</h2>
+                            <div class="block-header__control control-block">
+                                <div class="control-block__icon control-block__icon--left">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                                <div class="control-block__dash">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="control-block__icon">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genres__items">
+                            <div class="genres__item">
+                                <a href="#" class="genres__body">
+                                    <div class="genres__card">
+                                        <img src="img/genres/action/action_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/action/action_02.webp" alt="poster 02">
+                                    </div>
+                                    <div  class="genres__card">
+                                        <img src="img/genres/action/action_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/action/action_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="genres__info info">
+                                    <h3 class="info__title">Action</h3>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="genres__item">
+                                <a href="#" class="genres__body">
+                                    <div class="genres__card">
+                                        <img src="img/genres/adventure/adventure_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/adventure/adventure_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/adventure/adventure_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/adventure/adventure_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="genres__info info">
+                                    <h3 class="info__title">Adventure</h3>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="genres__item">
+                                <a href="#" class="genres__body">
+                                    <div class="genres__card">
+                                        <img src="img/genres/comedy/comedy_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/comedy/comedy_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/comedy/comedy_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/comedy/comedy_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="genres__info info">
+                                    <h3 class="info__title">Comedy</h3>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="genres__item">
+                                <a href="#" class="genres__body">
+                                    <div class="genres__card">
+                                        <img src="img/genres/drama/drama_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/drama/drama_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/drama/drama_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/drama/drama_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="genres__info info">
+                                    <h3 class="info__title">Drama</h3>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="genres__item">
+                                <a href="#" class="genres__body">
+                                    <div class="genres__card">
+                                        <img src="img/genres/horror/horror_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/horror/horror_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/horror/horror_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="genres__card">
+                                        <img src="img/genres/horror/horror_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="genres__info info">
+                                    <h3 class="info__title">Horror</h3>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="movies__popular popular">
+                        <div class="popular__block block-header">
+                            <h2 class="block-header__title title">Popular Top 10 In Genres</h2>
+                            <div class="block-header__control control-block">
+                                <div class="control-block__icon control-block__icon--left">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                                <div class="control-block__dash">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="control-block__icon">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__items">
+                            
+                            <div class="popular__item">
+                                <a href="#" class="popular__body">
+                                    <div class="popular__card">
+                                        <img src="img/popular/action/action_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/action/action_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/action/action_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/action/action_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="popular__info info">
+                                    <div class="info__inner">
+                                        <a class="info__link" href="#">Top 10 In</a>
+                                        <h3 class="info__title info__title--big ">Action</h3>
+                                    </div>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="popular__item">
+                                <a href="#" class="popular__body">
+                                    <div class="popular__card">
+                                        <img src="img/popular/adventure/adventure_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/adventure/adventure_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/adventure/adventure_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/adventure/adventure_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="popular__info info">
+                                    <div class="info__inner">
+                                        <a class="info__link" href="#">Top 10 In</a>
+                                        <h3 class="info__title info__title--big">Adventure</h3>
+                                    </div>
+                                    <button class="info__button button-action"></button>
+                                </div>
+                            </div>
+                            <div class="popular__item">
+                                <a href="#" class="popular__body">
+                                    <div class="popular__card">
+                                        <img src="img/popular/comedy/comedy_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/comedy/comedy_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/comedy/comedy_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/comedy/comedy_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="popular__info info">
+                                    <div class="info__inner">
+                                        <a class="info__link" href="#">Top 10 In</a>
+                                        <h3 class="info__title info__title--big">Comedy</h3>
+                                    </div>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            <div class="popular__item">
+                                <a href="#" class="popular__body">
+                                    <div class="popular__card">
+                                        <img src="img/popular/drama/drama_01.webp" alt="poster 01">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/drama/drama_02.webp" alt="poster 02">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/drama/drama_03.webp" alt="poster 03">
+                                    </div>
+                                    <div class="popular__card">
+                                        <img src="img/popular/drama/drama_04.webp" alt="poster 04">
+                                    </div>
+
+                                </a>
+                                <div class="popular__info info">
+                                    <div class="info__inner">
+                                        <a class="info__link" href="#">Top 10 In</a>
+                                        <h3 class="info__title info__title--big">Drama</h3>
+                                    </div>
+                                    <button class="info__button button-action"></button>
+
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </section>
+                    <section class="movies__trending trending">
+                        <div class="trending__block block-header">
+                            <h2 class="block-header__title title">Trending Now</h2>
+                            <div class="block-header__control control-block">
+                                <div class="control-block__icon control-block__icon--left">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                                <div class="control-block__dash">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="control-block__icon">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trending__items">
+                            <div class="trending__item">
+                                <a href="#" class="trending__card">
+                                    <img src="img/trending/trending_01.webp" alt="poster 01"> 
+                                </a>
+                                <div class="trending__info info">
+                                    <div class="info__duration">
+                                        <span>1h 30min</span>
+                                    </div>
+                                    <div class="info__view">
+                                        <span>2K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trending__item">
+                                <a href="#" class="trending__card">
+                                    <img src="img/trending/trending_02.webp" alt="poster 02">
+                                </a>
+                                <div class="trending__info info">
+                                    <div class="info__duration">
+                                        <span>1h 57min</span>
+                                    </div>
+                                    <div class="info__view">
+                                        <span>1.5K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trending__item">
+                                <a href="#" class="trending__card">
+                                    <img src="img/trending/trending_03.webp" alt="poster 03">
+                                </a>
+                                <div class="trending__info info">
+                                    <div class="info__duration">
+                                        <span>2h 10min</span>
+                                    </div>
+                                    <div class="info__view">
+                                        <span>1.8K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trending__item">
+                                <a href="#" class="trending__card">
+                                    <img src="img/trending/trending_04.webp" alt="poster 04">                                    
+                                </a>
+                                <div class="trending__info info">
+                                    <div class="info__duration">
+                                        <span>2h 20min</span>
+                                    </div>
+                                    <div class="info__view">
+                                        <span>3K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trending__item">
+                                <a href="#" class="trending__card">
+                                    <img src="img/trending/trending_05.webp" alt="poster 05">
+                                </a>
+                                <div class="trending__info info">
+                                    <div class="info__duration">
+                                        <span>1h 42min</span>
+                                    </div>
+                                    <div class="info__view">
+                                        <span>5K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="movies__new new">
+                        <div class="new__block block-header">
+                            <h2 class="block-header__title title">New Releases</h2>
+                            <div class="block-header__control control-block">
+                                <div class="control-block__icon control-block__icon--left">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                                <div class="control-block__dash">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="control-block__icon">
+                                    <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.75 1.25L22.5 10M22.5 10L13.75 18.75M22.5 10H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new__items">
+                            <div class="new__item">
+                                <a href="#" class="new__card">
+                                    <img src="img/new/new_01.webp" alt="poster 01">
+                                </a>
+                                <div class="new__info info">
+                                    <div class="info__release">
+                                        <time datetime="2023-04-14">Released at 14 April 2023</time>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="new__item">
+                                <a href="#" class="new__card">
+                                    <img src="img/new/new_02.webp" alt="poster 02">
+                                </a>
+                                <div class="new__info info">
+                                    <p class="info__release">
+                                        Released at
+                                        <time datetime="2023-04-22">22 April 2023</time>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="new__item">
+                                <a href="#" class="new__card">
+                                    <img src="img/new/new_03.webp" alt="poster 03">
+                                </a>
+                                <div class="new__info info">
+                                    <p class="info__release">
+                                        Released at
+                                        <time datetime="2023-04-13">13 April 2023</time>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="new__item">
+                                <a href="#" class="new__card">
+                                    <img src="img/new/new_04.webp" alt="poster 04">
+                                </a>
+                                <div class="new__info info">
+                                    <p class="info__release">
+                                        Released at
+                                        <time datetime="2023-04-19">19 April 2023</time>
+                                    </p> 
+                                </div>
+                            </div>
+                            <div class="new__item">
+                                <a href="#" class="new__card">
+                                    <img src="img/new/new_05.webp" alt="poster 05">
+                                </a>
+                                <div class="new__info info">
+                                    <p class="info__release">
+                                        Released at
+                                        <time datetime="2023-04-11">11 April 2023</time>
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+          
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <h2 class="footer__title title">Lesson №21</h2>
+            </div>        
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,769 @@
+
+// @import url('https://fonts.googleapis.com/css?family=Work+Sans:regular,500,600&display=swap');
+@import '_mixins.scss';
+@import '_fonts.scss';
+@import '_reset.scss';
+
+$colorBlackLight: #262626;
+$colorBlackDark: #0F0F0F;
+$colorMiddle: #1A1A1A;
+$colorBorder: #1F1F1F;
+$colorMain: #141414;
+
+body { 
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    line-height: 1.5;
+    background-color: $colorMain;
+    color: #fff;
+}
+
+[class*='__container'] {
+    max-width: 1624px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.page {
+    flex: 1 0 auto;
+}
+
+.title {
+    @include adaptiveValue("font-size", 38, 28);
+    font-weight: 700;
+}
+
+.button {
+    background-color: #E50000;
+    color: #fff;
+    // padding: 0.75rem 1.5rem;
+    border-radius: toRem(8);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: toRem(20);
+    padding: toRem(10) toRem(24);
+
+}
+
+.button--icon {
+    border-radius: toRem(8);
+    font-weight: 600;
+    line-height: 1;
+    font-size: toRem(18);
+    padding-block: toRem(14);
+    display: flex;
+    
+
+
+    span {
+        position: relative;
+        
+        padding-right: toRem(29);
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url(../img/hero/treangle.svg) 0 0  no-repeat;
+            width: toRem(20);
+            height: toRem(20);
+            top: 0;
+            left: 0;
+        }
+}
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(10);
+    // padding-block: toRem(15.5);
+}
+
+.control-block {
+    display: flex;
+    column-gap: toRem(30);
+    align-items: center;
+    justify-content: space-between;
+    padding: toRem(16);
+    background-color: $colorBlackDark;
+    border-radius: toRem(8);
+
+    &__icon {
+        padding: toRem(14);
+        background-color: $colorMiddle;
+        border-radius: toRem(8);
+        border: 1px solid $colorBorder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        svg {
+            width: toRem(21);
+            height: toRem(18);
+            overflow: hidden;
+            object-fit: cover;
+            
+        }
+        
+    
+        
+    }
+
+    &--wide {
+        background-color: transparent;
+    }
+
+    &__icon--left {
+        svg {
+            transform: rotate(180deg);
+        }
+        
+    } 
+
+    &__icon--dark {
+        background-color: $colorBlackDark;
+        
+    }
+
+    &__dash {
+        display: flex;
+        column-gap: toRem(3);
+
+        span {
+            width: toRem(23);
+            height: toRem(4);
+            background-color: #333333;
+            border-radius: toRem(4);
+            &:nth-child(1) {
+                background-color: #E50000;
+            }
+        }
+    }
+}
+
+.button-action {
+    background: url(../img/hero/arrow.svg) 0 0 / cover no-repeat;
+    width: toRem(20);
+    height: toRem(17);
+}
+
+.info {
+    &__title {
+        font-size: toRem(18);
+        font-weight: 600;
+        &--big {
+            font-size: toRem(20);
+        }
+    }
+
+    &__link {
+        background-color: #E50000;
+        border-radius: toRem(5);
+        padding: toRem(10);
+        font-weight: 600;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(4);
+        }
+    }
+
+}
+/*=header=============================*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    // height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: $colorMain;
+    // padding-block-end: toRem(50);
+
+    
+    &__container {
+        min-height: toRem(120);
+        display: flex;
+        justify-content: space-between;
+        padding-block: toRem(10);
+        align-items: center;
+        column-gap: toRem(10);
+    }
+
+    &__logo {
+        flex-basis: toRem(200);
+    }
+
+    &__burger {
+    }
+
+    &__menu {
+        background-color: $colorBlackDark;
+        border: toRem(4) solid #1F1F1F;
+        padding: toRem(10) toRem(40);
+        border-radius: toRem(12);
+
+
+        
+    }
+
+    &__action {
+        flex-basis: toRem(200);
+        display: flex;
+        column-gap: toRem(30);
+        justify-content: flex-end;
+    }
+}
+.menu {
+
+    &__list {
+        display: flex;
+        column-gap: toRem(6);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+       
+    }
+
+    &__link {
+        text-transform: capitalize;
+        color: #BFBFBF;
+        font-size: toRem(18);
+        padding-block: toRem(14);
+        padding-inline: toRem(24);
+        border-radius: toRem(8);
+        border: toRem(1) solid $colorMain;
+        transition: background-color 0.3s, color 0.3s;
+        &:hover {
+            background-color: #1A1A1A;
+            color: #fff;
+        }  
+    }
+    &__link.active {
+        background-color: #1A1A1A;
+            color: #fff;
+    }
+}
+.action {
+
+    &__item {
+    }
+}
+
+
+
+/*=hero============================*/
+.page {
+    
+
+    &__hero {
+        padding-block: toRem(170) toRem(180);
+    }
+}
+.hero {
+    &__container {
+        
+    }
+
+    &__inner {
+        padding: toRem(50) toRem(50) toRem(20);
+        border-radius: toRem(12);
+        border: 1px solid $colorBlackLight;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        overflow: hidden;
+        width: 100%;
+        height: 100svh;
+        justify-content: flex-end;
+        
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: toRem(0);
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: linear-gradient(0deg, $colorMain 0%, rgba(20, 20, 20, 0.00) 100%),;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+
+        }
+    }
+    
+
+    &__content {
+        text-align: center;
+        max-width: toRem(1194);
+    }
+
+    &__title:not(:last-child) {
+        margin-bottom: toRem(4);
+    }
+
+    &__text {
+        color: #9999;
+        font-size: toRem(18);
+    }
+
+    &__text:not(:last-child) {
+        margin-bottom: toRem(30);
+    }
+
+    &__choice {
+        display: flex;
+        column-gap: toRem(20);
+        align-items: center;
+        justify-content: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+        }
+    }
+
+    &__block {
+        display: block;
+
+    }
+}
+.title {
+}
+.choice {
+
+    &__button {
+        
+    }
+
+    &__items {
+        display: flex;
+        column-gap: toRem(10);
+        align-items: center;
+
+    }
+
+    &__item {
+        
+    }
+
+    &__icon {
+        padding: toRem(14);
+        border-radius: toRem(8);
+        border: 1px solid $colorBlackLight;
+        background-color: $colorBlackDark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+            width: toRem(25);
+            height: toRem(25);
+            object-fit: contain;
+        }
+    }
+}
+.button {
+}
+
+/*=movies=============================*/
+.page {
+
+    &__movies {
+        
+    }
+}
+.movies {
+
+    &__container {
+        border-radius: toRem(12);
+        border: 1px solid $colorBlackLight;
+        padding: toRem(50);
+    }
+
+    &__button {
+        transform: translateY(-70px);
+
+    }
+
+    &__genres {
+        
+    }
+}
+.button {
+}
+
+.block-header {
+
+    &__title {
+    }
+
+    &__control {
+    }
+
+    &__icon {
+    }
+
+    &__dash {
+    }
+}
+.title {
+}
+
+/*=genres============================*/
+.movies {
+
+    &__genres {
+        @include adaptiveValue("padding-block-end", 100, 40);
+    }
+}
+.genres {
+
+
+    &__block {
+        &:not(:last-child) {
+            // margin-bottom: toRem(50);
+            @include adaptiveValue("margin-bottom", 50, 30);
+            
+        }
+        
+    }
+    
+
+    &__items {
+        display: flex;
+        @include adaptiveValue("column-gap", 30, 15);
+        overflow: auto;
+        justify-content: space-between;
+
+    }
+
+    &__item {
+        flex-basis: toRem(276);
+        // flex: 0 0 toRem(276);
+        aspect-ratio: 276 / 342;
+        padding: toRem(30);
+        background-color: $colorMiddle;
+        border-radius: toRem(12);
+        border: 1px solid $colorBlackLight;
+        
+    }
+
+    &__body {
+        display: grid;
+        // grid-template-columns: repeat(2, toRem(102));
+        grid-template-columns: repeat(2, minmax(toRem(75), 1fr));
+        gap: toRem(5);
+        position: relative;
+        
+
+        &::after {
+            content: '';
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    &__card {
+        aspect-ratio: 105 / 123;
+        border-radius: toRem(10);
+        overflow: hidden;
+        max-width: toRem(105);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        column-gap: toRem(10);
+        align-items: center;
+    }
+
+}
+
+
+/*=popular============================*/
+.movies {
+
+    &__popular {
+        @include adaptiveValue("padding-block-end", 100, 40);
+    }
+}
+.popular {
+
+    &__block {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+            
+        }
+    }
+
+    &__items {
+        display: flex;
+        @include adaptiveValue("column-gap", 30, 15);
+        overflow: auto;
+
+    }
+
+    &__item {
+        flex-basis: toRem(352);
+        aspect-ratio: 352 / 378;
+        padding: toRem(30);
+        background-color: $colorMiddle;
+        border-radius: toRem(12);
+        border: 1px solid $colorBlackLight;
+        
+        
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(toRem(75), 1fr));
+        gap: toRem(10);
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);
+
+            
+        }
+    }
+
+    &__card {
+        aspect-ratio: 141 / 121;
+        border-radius: toRem(4);
+        overflow: hidden;
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: toRem(20);
+    }
+}
+
+
+
+/*=trending=============================*/
+.movies {
+
+    &__trending {
+        @include adaptiveValue("padding-block-end", 100, 40);
+    }
+}
+.trending {
+
+    &__block {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+            
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(toRem(230), 1fr));
+        @include adaptiveValue("gap", 20, 12);
+        overflow: auto;
+    }
+
+    &__item {
+        max-width: toRem(284);     
+        border-radius: toRem(12);
+        aspect-ratio: 284 / 377;
+        padding: toRem(20);
+        background-color: $colorMiddle;
+        border: 1px solid $colorBlackLight;
+    }
+
+    &__card {
+        max-width: 244px;
+        aspect-ratio: 244 / 281;
+        border-radius: toRem(12);
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+   
+    &__info {
+        display: flex;
+        column-gap: toRem(8);
+        justify-content: space-between;
+    }
+}
+
+.info {
+    font-weight: 500;
+
+    &__duration {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(4);
+        border-radius: 51px;
+        border: 1px solid $colorBlackLight;
+        background: $colorMain;
+        padding: toRem(6) toRem(10) toRem(6) toRem(6);
+        &::before {
+            content: '';
+            background: url(../img/trending/info.svg) 0 0 / cover no-repeat;
+            width: toRem(20);
+            height: toRem(20);
+        }
+
+        span {
+            white-space: nowrap;
+        }
+    }
+
+    &__view {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(4);
+        border-radius: 51px;
+        border: 1px solid $colorBlackLight;
+        background: $colorMain;
+        padding: toRem(6) toRem(10) toRem(6) toRem(6);
+        &::before {
+            content: '';
+            background: url(../img/trending/viewer.svg) 0 0 / cover no-repeat;
+            width: toRem(22);
+            height: toRem(17);
+        }
+    }
+}
+
+/*=new=============================*/
+
+.movies {
+
+}
+.new {
+
+    &__block {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+            
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(toRem(230), 1fr));
+        @include adaptiveValue("gap", 20, 12);
+        overflow: auto;
+    }
+
+    &__item {
+        border-radius: toRem(12);
+        aspect-ratio: 284 / 377;
+        padding: toRem(20);
+        background-color: $colorMiddle;
+        border: 1px solid $colorBlackLight;
+    }
+
+    &__card {
+        border-radius: toRem(12);
+        overflow: hidden;
+        max-width: 244px;
+        aspect-ratio: 244 / 281;
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+       
+    }
+}
+
+
+.info {
+
+    &__release {
+        color: #999999;
+        text-align: center;
+
+        time {
+            color: #BFBFBF;
+        }
+    }
+}
+
+/*=footer============================*/
+.footer {
+
+    &__container {
+        // text-align: center;
+        min-height: toRem(80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        
+    }
+}
+
