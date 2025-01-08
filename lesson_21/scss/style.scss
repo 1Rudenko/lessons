@@ -16,6 +16,10 @@ body {
     line-height: 1.5;
     background-color: $colorMain;
     color: #fff;
+    
+    .open-menu & {
+        overflow: hidden;
+    }
 }
 
 [class*='__container'] {
@@ -143,6 +147,10 @@ body {
             }
         }
     }
+
+    @media (max-width: toEm(767.98)) {
+        display: none;
+    }
 }
 
 .button-action {
@@ -198,6 +206,11 @@ body {
         position: relative;
         z-index: 5;
         
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
     }
 
     &__burger {
@@ -206,11 +219,12 @@ body {
         @media (max-width: toEm(991.98)) {
             display: flex;
             flex-direction: column;
-            flex: 0 0 30px;
+            flex: 0 0 toRem(28);
             justify-content: space-between;
             z-index: 5;
             position: relative;
-            margin-left: 30px;
+            // margin-left: 30px;
+            @include adaptiveValue("margin-left", 30, 15);
 
             span,
             &::before,
@@ -241,7 +255,7 @@ body {
 
             &::after {
                 .open-menu & {
-                    transform: rotate(-45deg) translateY(-1px);
+                    transform: rotate(-45deg) translateY(-1.5px);
                 }
             }
         }   
@@ -266,18 +280,32 @@ body {
             top: 0;
             left: 100%;
             transition: left 0.3s;
+            overflow: auto;
+
+            &:after {
+                content: '';
+                position: fixed;
+                width: 100%;
+                height: 120px;
+                top: 0;
+                left: 0;
+                background-color: $colorMain;
+            }
 
         }
         .open-menu & {
             left: 0;
             background-color: $colorMain;
+
         }
     }
 
     &__action {
         display: flex;
-        column-gap: toRem(30);
+        @include adaptiveValue("column-gap", 30, 15);
         justify-content: space-between;
+        position: relative;
+        z-index: 5;
     }
 }
 .menu {
@@ -292,7 +320,7 @@ body {
         @media (max-width: toEm(991.98)) {
             flex-direction: column;
             align-items: flex-end;
-            padding: 120px 15px 30px 0px;
+            padding: toRem(120) toRem(15) toRem(0) toRem(0);
         }
     }
 
@@ -332,12 +360,26 @@ body {
     }
 }
 .action {
+    &__item {
+
+        svg {
+            width: 28px;
+            aspect-ratio: 1;
+        }
+    }
+
     @media (max-width: toEm(991.98)) {
         margin-left: auto;
 
+        &__item {
+
+            svg {
+                width: 24px;
+            }
+        }
+
     }
-    &__item {
-    }
+    
 }
 
 
@@ -423,7 +465,8 @@ body {
 
     &__choice {
         display: flex;
-        column-gap: toRem(20);
+        flex-wrap: wrap;
+        gap: toRem(20);
         align-items: center;
         justify-content: center;
         &:not(:last-child) {

@@ -102,6 +102,9 @@ body {
   background-color: #141414;
   color: #fff;
 }
+.open-menu body {
+  overflow: hidden;
+}
 
 [class*=__container] {
   max-width: 1624px;
@@ -259,6 +262,11 @@ body {
 .control-block__dash span:nth-child(1) {
   background-color: #E50000;
 }
+@media (max-width: 47.99875em) {
+  .control-block {
+    display: none;
+  }
+}
 
 .button-action {
   background: url(../img/hero/arrow.svg) 0 0/cover no-repeat;
@@ -314,6 +322,11 @@ body {
   position: relative;
   z-index: 5;
 }
+.header__logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .header__burger {
   display: none;
 }
@@ -327,15 +340,31 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30px;
-            flex: 0 0 30px;
+        -ms-flex: 0 0 1.75rem;
+            flex: 0 0 1.75rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 5;
     position: relative;
-    margin-left: 30px;
   }
+}
+@media (max-width: 61.99875em) and (min-width: 101.5em) {
+  .header__burger {
+    margin-left: 1.875rem;
+  }
+}
+@media (max-width: 61.99875em) and (min-width: 20em) and (max-width: 101.5em) {
+  .header__burger {
+    margin-left: clamp( 0.9375rem , 0.7074386503rem  +  1.1503067485vw , 1.875rem );
+  }
+}
+@media (max-width: 61.99875em) and (max-width: 20em) {
+  .header__burger {
+    margin-left: 0.9375rem;
+  }
+}
+@media (max-width: 61.99875em) {
   .header__burger span, .header__burger::before, .header__burger::after {
     content: "";
     width: 100%;
@@ -358,9 +387,9 @@ body {
             transform: rotate(45deg);
   }
   .open-menu .header__burger::after {
-    -webkit-transform: rotate(-45deg) translateY(-1px);
-        -ms-transform: rotate(-45deg) translateY(-1px);
-            transform: rotate(-45deg) translateY(-1px);
+    -webkit-transform: rotate(-45deg) translateY(-1.5px);
+        -ms-transform: rotate(-45deg) translateY(-1.5px);
+            transform: rotate(-45deg) translateY(-1.5px);
   }
 }
 @media (min-width: 61.99875em) {
@@ -380,6 +409,16 @@ body {
     left: 100%;
     -webkit-transition: left 0.3s;
     transition: left 0.3s;
+    overflow: auto;
+  }
+  .header__menu:after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    left: 0;
+    background-color: #141414;
   }
 }
 .open-menu .header__menu {
@@ -390,12 +429,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 1.875rem;
-     -moz-column-gap: 1.875rem;
-          column-gap: 1.875rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+@media (min-width: 101.5em) {
+  .header__action {
+    -webkit-column-gap: 1.875rem;
+       -moz-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 101.5em) {
+  .header__action {
+    -webkit-column-gap: clamp( 0.9375rem , 0.7074386503rem  +  1.1503067485vw , 1.875rem );
+       -moz-column-gap: clamp( 0.9375rem , 0.7074386503rem  +  1.1503067485vw , 1.875rem );
+            column-gap: clamp( 0.9375rem , 0.7074386503rem  +  1.1503067485vw , 1.875rem );
+  }
+}
+@media (max-width: 20em) {
+  .header__action {
+    -webkit-column-gap: 0.9375rem;
+       -moz-column-gap: 0.9375rem;
+            column-gap: 0.9375rem;
+  }
 }
 
 .menu__list {
@@ -421,7 +480,7 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding: 120px 15px 30px 0px;
+    padding: 7.5rem 0.9375rem 0rem 0rem;
   }
 }
 .menu__link {
@@ -490,11 +549,19 @@ body {
   }
 }
 
+.action__item svg {
+  width: 28px;
+  aspect-ratio: 1;
+}
 @media (max-width: 61.99875em) {
   .action {
     margin-left: auto;
   }
+  .action__item svg {
+    width: 24px;
+  }
 }
+
 /*=hero============================*/
 .page__hero {
   -webkit-padding-after: 11.25rem;
@@ -602,9 +669,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 1.25rem;
-     -moz-column-gap: 1.25rem;
-          column-gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
